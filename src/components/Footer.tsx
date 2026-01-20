@@ -2,9 +2,9 @@ import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
+    { icon: Facebook, href: "https://www.facebook.com/addecon08", label: "Facebook" },
+    { icon: Instagram, href: "https://www.instagram.com/addecondominios/", label: "Instagram" },
+    { icon: Phone, href: "https://api.whatsapp.com/message/T2RUN2KJNEY7C1?autoload=1&app_absent=0", label: "WhatsApp" },
   ];
 
   const quickLinks = [
