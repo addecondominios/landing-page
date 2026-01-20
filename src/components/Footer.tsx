@@ -1,0 +1,119 @@
+import { Facebook, Instagram, Linkedin, Phone, Mail, MapPin } from "lucide-react";
+
+const Footer = () => {
+  const socialLinks = [
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Linkedin, href: "#", label: "LinkedIn" },
+  ];
+
+  const quickLinks = [
+    { label: "Sobre Nós", href: "#sobre" },
+    { label: "Serviços", href: "#servicos" },
+    { label: "Aplicativo", href: "#aplicativo" },
+    { label: "Contato", href: "#contato" },
+  ];
+
+  const services = [
+    "Apoio ao Síndico",
+    "Assessoria Financeira",
+    "Gestão de RH",
+    "Assessoria Jurídica",
+  ];
+
+  return (
+    <footer className="bg-card border-t border-border">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Brand */}
+          <div>
+            <a href="#" className="flex items-center gap-1 mb-6">
+              <span className="text-2xl font-extrabold text-primary">ADDECON</span>
+              <span className="text-2xl font-extrabold text-foreground">DOMÍNIOS</span>
+            </a>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Especialistas em gestão transparente de condomínios há mais de 15 anos.
+            </p>
+            <div className="flex gap-3">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  aria-label={social.label}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-foreground font-bold mb-6">Links Rápidos</h4>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h4 className="text-foreground font-bold mb-6">Serviços</h4>
+            <ul className="space-y-3">
+              {services.map((service) => (
+                <li key={service}>
+                  <span className="text-muted-foreground">{service}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className="text-foreground font-bold mb-6">Contato</h4>
+            <ul className="space-y-4">
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Phone className="w-5 h-5 text-primary" />
+                (11) 99999-9999
+              </li>
+              <li className="flex items-center gap-3 text-muted-foreground">
+                <Mail className="w-5 h-5 text-primary" />
+                contato@addecon.com.br
+              </li>
+              <li className="flex items-start gap-3 text-muted-foreground">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
+                Itapevi - SP
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-muted-foreground text-sm">
+            © {new Date().getFullYear()} Addecondomínios. Todos os direitos reservados.
+          </p>
+          <div className="flex gap-6 text-sm">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              Política de Privacidade
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              Termos de Uso
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
