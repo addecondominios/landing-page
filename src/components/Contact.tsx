@@ -12,8 +12,18 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
+    
+    // Construir o corpo do email
+    const subject = encodeURIComponent("Contato via Site - Landing Page");
+    const body = encodeURIComponent(
+      `Nome: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Telefone: ${formData.phone}\n\n` +
+      `Mensagem:\n${formData.message}`
+    );
+    
+    // Abrir cliente de email com os dados preenchidos
+    window.location.href = `mailto:contato@addecon.com.br?subject=${subject}&body=${body}`;
   };
 
   const contactInfo = [
@@ -32,8 +42,8 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Endereço",
-      value: "Itapevi - SP",
-      href: "#",
+      value: "R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saude, Itapevi - SP",
+      href: "https://www.google.com/maps/dir/?api=1&destination=R.+Prof.+Dimarães+Antônio+Sandei,+185+-+Cidade+da+Saude,+Itapevi+-+SP,+06693-130",
     },
     {
       icon: Clock,
@@ -85,11 +95,10 @@ const Contact = () => {
             {/* Map */}
             <div className="aspect-video rounded-2xl overflow-hidden border border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8!2d-46.9437!3d-23.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0f4b0e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sR.%20Prof.%20Dimar%C3%A3es%20Ant%C3%B4nio%20Sandei%2C%20185%20-%20Cidade%20da%20Saude%2C%20Itapevi%20-%20SP%2C%2006693-130!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8!2d-46.9437!3d-23.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf0f4b0e1e1e1f%3A0x1e1e1e1e1e1e1e1e!2sR.%20Prof.%20Dimar%C3%A3es%20Ant%C3%B4nio%20Sandei%2C%20185%20-%20Cidade%20da%20Saude%2C%20Itapevi%20-%20SP%2C%2006693-130!5e0!3m2!1spt-BR!2sbr!4v1234567890&disableDefaultUI=1"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
+                style={{ border: 0, pointerEvents: 'none' }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Localização - R. Prof. Dimarães Antônio Sandei, 185 - Itapevi, SP"
