@@ -7,6 +7,7 @@ import {
   Calendar,
   Download
 } from "lucide-react";
+import appScreenshot from "@/assets/unnamed.webp";
 
 const AppSection = () => {
   const features = [
@@ -31,7 +32,7 @@ const AppSection = () => {
             <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
               Informação na <span className="text-gradient">palma da sua mão</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-foreground text-lg mb-8 leading-relaxed">
               Acesse a prestação de contas, atas e documentos do condomínio pelo nosso app. 
               Tudo em um só clique!
             </p>
@@ -53,7 +54,7 @@ const AppSection = () => {
 
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" className="gap-3">
+              <Button variant="heroOutline" size="xl" className="gap-3">
                 <Download className="w-5 h-5" />
                 Download iOS
               </Button>
@@ -73,36 +74,12 @@ const AppSection = () => {
               {/* Phone Frame */}
               <div className="relative w-72 h-[580px] rounded-[3rem] bg-gradient-to-b from-secondary to-muted border-4 border-border shadow-2xl p-3">
                 {/* Screen */}
-                <div className="w-full h-full rounded-[2.5rem] bg-background overflow-hidden">
-                  {/* Status Bar */}
-                  <div className="h-8 bg-card flex items-center justify-center">
-                    <div className="w-20 h-5 rounded-full bg-border" />
-                  </div>
-                  
-                  {/* App Content */}
-                  <div className="p-4 space-y-4">
-                    {/* Header */}
-                    <div className="flex items-center gap-2">
-                      <Smartphone className="w-6 h-6 text-primary" />
-                      <span className="font-bold text-primary">ADDECON</span>
-                      <span className="font-bold text-foreground text-sm">APP</span>
-                    </div>
-                    
-                    {/* Menu Items */}
-                    <div className="space-y-3 mt-6">
-                      {["Boletos", "Documentos", "Assembleias", "Reservas", "Contato"].map((item, i) => (
-                        <div
-                          key={item}
-                          className="p-3 rounded-xl bg-card border border-border flex items-center gap-3"
-                        >
-                          <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
-                            <div className="w-4 h-4 rounded bg-primary/50" />
-                          </div>
-                          <span className="text-sm text-foreground">{item}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                <div className="w-full h-full rounded-[2.5rem] overflow-hidden">
+                  <img 
+                    src={appScreenshot} 
+                    alt="ADDECON App" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
               

@@ -28,7 +28,7 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
             Especialistas em <span className="text-gradient">Gestão Condominial</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-foreground max-w-2xl mx-auto text-lg">
             Somos especialistas em gestão transparente, há mais de 15 anos no mercado 
             administrativo condominial desburocratizando o acesso às informações.
           </p>
@@ -41,8 +41,8 @@ const About = () => {
               <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center">
                 <div className="text-center p-8">
                   <div className="text-8xl font-extrabold text-gradient mb-4">15+</div>
-                  <p className="text-xl text-muted-foreground">Anos de experiência</p>
-                  <p className="text-muted-foreground/60 mt-2">administrando condomínios</p>
+                  <p className="text-xl text-foreground">Anos de experiência</p>
+                  <p className="text-foreground/60 mt-2">administrando condomínios</p>
                 </div>
               </div>
             </div>
@@ -51,10 +51,10 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed">
               Possuímos como pilares a <span className="text-foreground font-semibold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed">
               Sendo uma das maiores administradoras de Itapevi e região, gerenciando <span className="text-primary font-semibold">mais de 50 condomínios</span> em toda a região metropolitana de São Paulo.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
@@ -82,7 +82,7 @@ const About = () => {
                 <value.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-foreground">{value.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+              <p className="text-foreground leading-relaxed">{value.description}</p>
             </div>
           ))}
         </div>

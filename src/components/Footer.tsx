@@ -28,10 +28,10 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-1 mb-6">
-              <span className="text-2xl font-extrabold text-primary">ADDECON</span>
-              <span className="text-2xl font-extrabold text-foreground">DOMÍNIOS</span>
+              <span className="text-2xl text-primary" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>ADDECON</span>
+              <span className="text-2xl text-foreground" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>DOMÍNIOS</span>
             </a>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
+            <p className="text-foreground mb-6 leading-relaxed">
               Especialistas em gestão transparente de condomínios há mais de 15 anos.
             </p>
             <div className="flex gap-3">
@@ -39,7 +39,7 @@ const Footer = () => {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   aria-label={social.label}
                 >
                   <social.icon className="w-5 h-5" />
@@ -56,7 +56,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
                   </a>
@@ -71,7 +71,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <span className="text-muted-foreground">{service}</span>
+                  <span className="text-foreground">{service}</span>
                 </li>
               ))}
             </ul>
@@ -81,15 +81,15 @@ const Footer = () => {
           <div>
             <h4 className="text-foreground font-bold mb-6">Contato</h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-muted-foreground">
+              <li className="flex items-center gap-3 text-foreground">
                 <Phone className="w-5 h-5 text-primary" />
-                (11) 99999-9999
+                (11) 91489-5831 / (11) 4774-6263
               </li>
-              <li className="flex items-center gap-3 text-muted-foreground">
+              <li className="flex items-center gap-3 text-foreground">
                 <Mail className="w-5 h-5 text-primary" />
                 contato@addecon.com.br
               </li>
-              <li className="flex items-start gap-3 text-muted-foreground">
+              <li className="flex items-start gap-3 text-foreground">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
                 Itapevi - SP
               </li>
@@ -99,14 +99,14 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
+          <p className="text-foreground text-sm">
             © {new Date().getFullYear()} Addecondomínios. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-foreground hover:text-primary transition-colors">
               Política de Privacidade
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="#" className="text-foreground hover:text-primary transition-colors">
               Termos de Uso
             </a>
           </div>

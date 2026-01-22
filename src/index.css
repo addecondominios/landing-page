@@ -2,7 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@font-face {
+  font-family: 'Arbotek';
+  src: url('/src/assets/fonnts.com-Arbotek_Light_Rounded.otf') format('opentype');
+  font-weight: 100 900;
+  font-style: normal;
+}
 
 @layer base {
   :root {
@@ -62,8 +69,18 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Montserrat', sans-serif;
+    @apply bg-background text-foreground;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, label, div {
+    font-weight: 100;
+    font-style: normal;
   }
 }
 
