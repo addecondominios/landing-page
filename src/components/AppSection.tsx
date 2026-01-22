@@ -24,7 +24,7 @@ const AppSection = () => {
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>

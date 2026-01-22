@@ -80,7 +80,7 @@ const Services = () => {
 
   return (
     <section id="servicos" className="py-24 bg-card/30">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Nossos Serviços</span>

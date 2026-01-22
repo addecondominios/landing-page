@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -21,7 +21,7 @@ const Contact = () => {
       icon: Phone,
       title: "Telefone / WhatsApp",
       value: "(11) 91489-5831 / (11) 4774-6263",
-      href: "tel:+5511914895831",
+      href: "https://wa.me/5511914895831",
     },
     {
       icon: Mail,
@@ -38,14 +38,14 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Horário",
-      value: "Seg - Sex: 8h às 18h",
+      value: "Seg - Sex: 9h às 17h",
       href: "#",
     },
   ];
 
   return (
     <section id="contato" className="py-24 bg-card/30">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Contato</span>
@@ -58,10 +58,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               {contactInfo.map((info) => (
                 <a
                   key={info.title}
@@ -73,9 +73,8 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
                       <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
-                    <p className="text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors">{info.title}</p>
-                    <p className="text-foreground font-semibold group-hover:text-primary-foreground transition-colors flex items-center gap-2">
-                      {info.title === "Telefone / WhatsApp" && <MessageCircle className="w-4 h-4" />}
+                    <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors whitespace-nowrap">{info.title}</p>
+                    <p className="text-foreground font-semibold group-hover:text-primary-foreground transition-colors text-xs sm:text-sm lg:text-base break-words">
                       {info.value}
                     </p>
                   </div>

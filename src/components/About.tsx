@@ -1,4 +1,6 @@
 import { Target, Eye, Heart } from "lucide-react";
+import servicosImage from "@/assets/servicos-administradora-condominios.jpg";
+import logoBranco from "@/assets/LOGO_Branco.svg";
 
 const About = () => {
   const values = [
@@ -21,7 +23,7 @@ const About = () => {
 
   return (
     <section id="sobre" className="py-24 relative">
-      <div className="container mx-auto px-4">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre Nós</span>
@@ -37,12 +39,26 @@ const About = () => {
         {/* About Content */}
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative">
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-primary/20 to-primary/5 p-8 border border-primary/20">
-              <div className="w-full h-full rounded-2xl bg-card flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="text-8xl font-extrabold text-gradient mb-4">15+</div>
-                  <p className="text-xl text-foreground">Anos de experiência</p>
-                  <p className="text-foreground/60 mt-2">administrando condomínios</p>
+            <div className="aspect-square rounded-3xl overflow-hidden border border-primary/20 shadow-2xl">
+              <div 
+                className="w-full h-full relative flex items-center justify-center"
+                style={{
+                  backgroundImage: `url(${servicosImage})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+                <div className="relative z-10 flex flex-col items-center justify-between h-full p-8">
+                  <div></div>
+                  <div className="text-center">
+                    <div className="text-7xl md:text-8xl font-extrabold text-primary mb-4 drop-shadow-2xl">+15</div>
+                    <p className="text-xl md:text-2xl text-white font-semibold drop-shadow-lg">Anos de experiência</p>
+                    <p className="text-white/90 mt-2 drop-shadow-md leading-relaxed">administrando condomínios e pessoas<br /></p>
+                  </div>
+                  <div className="w-40 h-auto opacity-70">
+                    <img src={logoBranco} alt="Addecon" className="w-full h-auto" />
+                  </div>
                 </div>
               </div>
             </div>

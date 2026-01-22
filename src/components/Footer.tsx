@@ -14,17 +14,10 @@ const Footer = () => {
     { label: "Contato", href: "#contato" },
   ];
 
-  const services = [
-    "Apoio ao Síndico",
-    "Assessoria Financeira",
-    "Gestão de RH",
-    "Assessoria Jurídica",
-  ];
-
   return (
     <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand */}
           <div>
             <a href="#" className="flex items-center gap-1 mb-6">
@@ -65,33 +58,21 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h4 className="text-foreground font-bold mb-6">Serviços</h4>
-            <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service}>
-                  <span className="text-foreground">{service}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h4 className="text-foreground font-bold mb-6">Contato</h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-foreground">
-                <Phone className="w-5 h-5 text-primary" />
-                (11) 91489-5831 / (11) 4774-6263
+              <li className="flex items-center gap-2 text-foreground">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                <span className="text-xs sm:text-sm lg:text-base break-words">(11) 91489-5831 / (11) 4774-6263</span>
               </li>
-              <li className="flex items-center gap-3 text-foreground">
-                <Mail className="w-5 h-5 text-primary" />
-                contato@addecon.com.br
+              <li className="flex items-center gap-2 text-foreground">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
+                <span className="break-all text-xs sm:text-sm lg:text-base">contato@addecon.com.br</span>
               </li>
-              <li className="flex items-start gap-3 text-foreground">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-                Itapevi - SP
+              <li className="flex items-start gap-2 text-foreground">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-xs sm:text-sm lg:text-base">R. Prof. Dimarães Antônio Sandei, 185 - Itapevi, SP</span>
               </li>
             </ul>
           </div>

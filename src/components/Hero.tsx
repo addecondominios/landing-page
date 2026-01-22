@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Shield, Users } from "lucide-react";
+import logoWhite from "@/assets/LOGO_Comp_Branco.png";
 
 const Hero = () => {
   return (
@@ -16,8 +17,8 @@ const Hero = () => {
       <div className="absolute top-1/4 left-10 w-20 h-20 rounded-full bg-primary/10 animate-float blur-xl" />
       <div className="absolute bottom-1/4 right-10 w-32 h-32 rounded-full bg-primary/5 animate-float blur-2xl" style={{ animationDelay: '2s' }} />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 relative z-10">
+        <div className="max-w-[1800px] mx-auto text-center">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-secondary/50 border border-border rounded-full px-4 py-2 mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -25,10 +26,9 @@ const Hero = () => {
           </div>
 
           {/* Main Title */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
-            <span className="text-primary" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>ADDECON</span>
-            <span className="text-foreground" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>DOMÍNIOS</span>
-          </h1>
+          <div className="flex justify-center mb-6 animate-fade-up" style={{ animationDelay: '0.1s' }}>
+            <img src={logoWhite} alt="Addecon Domínios" className="h-20 md:h-28 lg:h-32 w-auto" />
+          </div>
 
           <p className="text-xl md:text-2xl text-foreground mb-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Administradora de Condomínios
@@ -47,9 +47,11 @@ const Hero = () => {
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
-            <Button variant="heroOutline" size="xl" className="relative overflow-hidden group">
-              <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-              <span className="relative z-10 font-semibold group-hover:text-primary-foreground transition-colors">Conheça Nossos Serviços</span>
+            <Button variant="heroOutline" size="xl" className="relative overflow-hidden group" asChild>
+              <a href="#servicos">
+                <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                <span className="relative z-10 font-semibold group-hover:text-primary-foreground transition-colors">Conheça Nossos Serviços</span>
+              </a>
             </Button>
           </div>
 
