@@ -23,7 +23,7 @@ const Contact = () => {
     );
     
     // Abrir cliente de email com os dados preenchidos
-    window.location.href = `mailto:contato@addecon.com.br?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:Addecondominios@hotmail.com?subject=${subject}&body=${body}`;
   };
 
   const contactInfo = [
@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "E-mail",
-      value: "contato@addecon.com.br",
-      href: "mailto:contato@addecon.com.br",
+      value: "Addecondominios@hotmail.com",
+      href: "mailto:Addecondominios@hotmail.com",
     },
     {
       icon: MapPin,
@@ -83,8 +83,8 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
                       <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
-                    <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors whitespace-nowrap">{info.title}</p>
-                    <p className="text-foreground font-semibold group-hover:text-primary-foreground transition-colors text-xs sm:text-sm lg:text-base break-words">
+                    <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors">{info.title}</p>
+                    <p className="text-foreground font-semibold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
                       {info.value}
                     </p>
                   </div>

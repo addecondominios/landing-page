@@ -62,17 +62,23 @@ const Footer = () => {
           <div>
             <h4 className="text-foreground font-bold mb-6">Contato</h4>
             <ul className="space-y-4">
-              <li className="flex items-center gap-2 text-foreground">
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                <span className="text-xs sm:text-sm lg:text-base break-words">(11) 91489-5831 / (11) 4774-6263</span>
+              <li className="flex items-center gap-3 text-foreground">
+                <Phone className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-[10px] sm:text-xs md:text-sm lg:text-base break-words flex-1">
+                  (11) 91489-5831 / (11) 4774-6263
+                </span>
               </li>
-              <li className="flex items-center gap-2 text-foreground">
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0" />
-                <span className="break-all text-xs sm:text-sm lg:text-base">contato@addecon.com.br</span>
+              <li className="flex items-center gap-3 text-foreground">
+                <Mail className="w-5 h-5 text-primary flex-shrink-0" />
+                <span className="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1">
+                  Addecondominios@hotmail.com
+                </span>
               </li>
-              <li className="flex items-start gap-2 text-foreground">
-                <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-xs sm:text-sm lg:text-base">R. Prof. Dimarães Antônio Sandei, 185 - Itapevi, SP</span>
+              <li className="flex items-start gap-3 text-foreground">
+                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-[10px] sm:text-xs md:text-sm lg:text-base flex-1">
+                  R. Prof. Dimarães Antônio Sandei, 185 - Itapevi, SP
+                </span>
               </li>
             </ul>
           </div>
