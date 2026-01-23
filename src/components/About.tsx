@@ -28,7 +28,7 @@ const About = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Sobre Nós</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Especialistas em <span className="text-gradient">Gestão Condominial</span>
+            Especialistas em <span className="text-gradient font-bold">Gestão Condominial</span>
           </h2>
           <p className="text-foreground max-w-2xl mx-auto text-lg">
             Somos especialistas em gestão transparente, há mais de 15 anos no mercado 

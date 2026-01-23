@@ -60,7 +60,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Contato</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Entre em <span className="text-gradient">Contato</span>
+            Entre em <span className="text-gradient font-bold">Contato</span>
           </h2>
           <p className="text-foreground max-w-2xl mx-auto text-lg">
             Estamos prontos para atender você e seu condomínio. 

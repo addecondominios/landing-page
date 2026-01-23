@@ -85,7 +85,7 @@ const Services = () => {
         <div className="text-center mb-16">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">Nossos Serviços</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Soluções <span className="text-gradient">Completas</span>
+            Soluções <span className="text-gradient font-bold">Completas</span>
           </h2>
           <p className="text-foreground max-w-2xl mx-auto text-lg">
             Oferecemos uma gama completa de serviços para a administração 
