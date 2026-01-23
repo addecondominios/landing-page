@@ -23,7 +23,7 @@ const Contact = () => {
     );
     
     // Abrir cliente de email com os dados preenchidos
-    window.location.href = `mailto:Addecondominios@hotmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:addecondominios@hotmail.com?subject=${subject}&body=${body}`;
   };
 
   const contactInfo = [
@@ -36,8 +36,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "E-mail",
-      value: "Addecondominios@hotmail.com",
-      href: "mailto:Addecondominios@hotmail.com",
+      value: "addecondominios@hotmail.com",
+      href: "mailto:addecondominios@hotmail.com",
     },
     {
       icon: MapPin,
