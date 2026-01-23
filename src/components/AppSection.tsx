@@ -54,13 +54,17 @@ const AppSection = () => {
 
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="heroOutline" size="xl" className="gap-3">
-                <Download className="w-5 h-5" />
-                Download iOS
+              <Button variant="heroOutline" size="xl" className="gap-3" asChild>
+                <a href="https://apps.apple.com/br/app/point-condom%C3%ADnio/id1287365436" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-5 h-5" />
+                  Download iOS
+                </a>
               </Button>
-              <Button variant="heroOutline" size="xl" className="gap-3">
-                <Download className="w-5 h-5" />
-                Download Android
+              <Button variant="heroOutline" size="xl" className="gap-3" asChild>
+                <a href="https://play.google.com/store/apps/details?id=com.pointcondominio.condominio&hl=pt" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-5 h-5" />
+                  Download Android
+                </a>
               </Button>
             </div>
           </div>

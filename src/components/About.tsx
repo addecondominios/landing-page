@@ -71,7 +71,7 @@ const About = () => {
               Possuímos como pilares a <span className="text-foreground font-semibold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
             </p>
             <p className="text-lg text-foreground leading-relaxed">
-              Sendo uma das maiores administradoras de Itapevi e região, gerenciando <span className="text-primary font-semibold">mais de 50 condomínios</span> em toda a região metropolitana de São Paulo.
+              Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-bold">em toda a região metropolitana e interior de São Paulo</span>.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
