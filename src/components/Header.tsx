@@ -9,7 +9,18 @@ const Header = () => {
   const navLinks = [
     { href: "#sobre", label: "Sobre" },
     { href: "#aplicativo", label: "Aplicativo" },
+    { href: "#contato", label: "Fale Conosco" },
   ];
+
+  const scrollToSection = (href: string, e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
@@ -32,8 +43,8 @@ const Header = () => {
                     <a
                       key={link.href}
                       href={link.href}
+                      onClick={(e) => scrollToSection(link.href, e)}
                       className="text-foreground hover:text-primary hover:scale-110 transition-all duration-300 px-4 py-3 text-left origin-left whitespace-nowrap"
-                      onClick={() => setIsMenuOpen(false)}
                     >
                       {link.label}
                     </a>
@@ -61,12 +72,9 @@ const Header = () => {
               >
                 <Phone className="w-5 h-5" />
               </a>
-              <a href="#contato"
-                onClick={(e) => {
-                  e.preventDefault();
-                  const element = document.getElementById('contato');
-                  element?.scrollIntoView({ behavior: 'smooth' });
-                }}
+              <a 
+                href="#contato"
+                onClick={(e) => scrollToSection('#contato', e)}
               >
                 <Button variant="hero" size="lg">
                   Fale Conosco
