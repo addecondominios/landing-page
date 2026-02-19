@@ -14,13 +14,29 @@ const Footer = () => {
     { label: "Contato", href: "#contato" },
   ];
 
+  const scrollToSection = (href: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    const id = href.replace('#', '');
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-card border-t border-border">
       <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Brand */}
           <div>
-            <a href="#" className="flex items-center gap-1 mb-6">
+            <a 
+              href="#" 
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="flex items-center gap-1 mb-6"
+            >
               <span className="text-2xl text-primary" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>ADDECON</span>
               <span className="text-2xl text-foreground" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>DOMÍNIOS</span>
             </a>
@@ -49,6 +65,7 @@ const Footer = () => {
                 <li key={link.label}>
                   <a
                     href={link.href}
+                    onClick={(e) => scrollToSection(link.href, e)}
                     className="text-foreground hover:text-primary transition-colors"
                   >
                     {link.label}
