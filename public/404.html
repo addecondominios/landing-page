@@ -5,23 +5,33 @@
     <title>Addecondominios</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript">
-      // SPA routing for GitHub Pages
-      // Redirect non-root paths to hash routes
-      var pathname = window.location.pathname;
+      // SPA routing for GitHub Pages with BrowserRouter
+      // GitHub Pages serves 404.html for any path that doesn't exist as a real file
+      // This redirects to index.html while preserving the original path
+      // React Router (BrowserRouter) then handles the routing
       
-      // Only process if not root and not index.html
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      var pathAndSearch = pathname + search;
+      
+      // Get the path relative to the root (removes domain)
+      var reloadPath = '/#' + pathAndSearch;
+      
+      // Check if this is a root request or contains a file extension
       if (pathname !== '/' && !pathname.includes('index.html') && !pathname.includes('.')) {
-        // Remove trailing slash and convert to hash route
-        var pathWithoutSlash = pathname.replace(/\/$/, '');
-        if (pathWithoutSlash !== '') {
-          var hashPath = '/#' + pathWithoutSlash;
-          console.log('Redirecting', pathname, 'to', hashPath);
-          window.location.replace(hashPath);
-        }
+        // Removing the hash and using the original path since we're using BrowserRouter now
+        // This will be handled by React Router
+        console.log('GitHub Pages serving index.html for', pathname);
       }
+      
+      // Always serve index.html content for non-file routes
+      // The browser will remain on the current path (pathname preserved)
+      // React Router will read window.location.pathname and render the correct component
     </script>
   </head>
   <body>
+    <div id="root"></div>
+    <script type="module" src="/assets/index-DCL-Hbqe.js"></script>
     <noscript>
       <p>This page requires JavaScript to work properly. <a href="/">Go to homepage</a></p>
     </noscript>
