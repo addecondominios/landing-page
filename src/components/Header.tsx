@@ -15,6 +15,14 @@ const Header = () => {
   const scrollToSection = (href: string, e?: React.MouseEvent) => {
     if (e) e.preventDefault();
     const id = href.replace('#', '');
+    
+    // Se for início (vazio), scroll ao topo
+    if (!id) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setIsMenuOpen(false);
+      return;
+    }
+    
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
