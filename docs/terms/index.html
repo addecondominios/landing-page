@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso - Addecondomínios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "DMSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #0d0d0d;
+            color: #fafaf8;
+            line-height: 1.6;
+        }
+
+        @font-face {
+            font-family: 'DMSans';
+            src: url('/assets/DMSans-Light.ttf') format('truetype');
+            font-weight: 300;
+        }
+
+        @font-face {
+            font-family: 'DMSans';
+            src: url('/assets/DMSans-Regular.ttf') format('truetype');
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'DMSans';
+            src: url('/assets/DMSans-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .logo-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #2d2d2d;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo-text {
+            font-family: "Arbotek", serif;
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+
+        .logo-primary {
+            color: #52d552;
+        }
+
+        .logo-foreground {
+            color: #fafaf8;
+        }
+
+        .back-button {
+            padding: 0.5rem 1rem;
+            background: #52d552;
+            color: #0d0d0d;
+            border: none;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-family: "DMSans", sans-serif;
+        }
+
+        .back-button:hover {
+            background: #46b346;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            min-height: calc(100vh - 200px);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #52d552;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #fafaf8;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #fafaf8;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #fafaf8;
+        }
+
+        a {
+            color: #52d552;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #7ee87e;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        .border-section {
+            border-top: 1px solid #2d2d2d;
+            padding-top: 3rem;
+            margin-top: 3rem;
+        }
+
+        .footer {
+            background: #1a1a1a;
+            border-top: 1px solid #2d2d2d;
+            padding: 4rem 1.5rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #fafaf8;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 0.95rem;
+            color: #fafaf8;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d2d2d;
+            padding-top: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #fafaf8;
+        }
+
+        @media (max-width: 768px) {
+            .logo-bar {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            .container {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-bar">
+        <a href="/" class="logo-link">
+            <span class="logo-text logo-primary">ADDECON</span>
+            <span class="logo-text logo-foreground">DOMÍNIOS</span>
+        </a>
+        <a href="/" class="back-button">← Voltar</a>
+    </div>
+
+    <div class="container">
+        <h1>Termos de Uso</h1>
+
+        <div class="border-section">
+            <h2>1. Termos</h2>
+            <p>Ao acessar este website, você concorda em estar vinculado pelos termos e condições de uso descrito nesta página. Se você não concordar em cumprir os termos e condições descritos aqui, não use este serviço.</p>
+        </div>
+
+        <div class="border-section">
+            <h2>2. Uso de Licença</h2>
+            <p>A permissão é concedida para visualizar e imprimir as páginas deste website mediante as seguintes condições:</p>
+            <ol>
+                <li>Esta licença é apenas para uso pessoal e não comercial</li>
+                <li>Você não pode modificar o material sem a permissão prévia da Addecondomínios</li>
+                <li>Você não pode copiar o material para fins comerciais ou públicos sem consentimento prévio</li>
+                <li>Você não pode transmitir o material a terceiros sem a permissão da Addecondomínios</li>
+                <li>Se violar qualquer uma destas restrições, sua licença será terminada automaticamente</li>
+            </ol>
+        </div>
+
+        <div class="border-section">
+            <h2>3. Isenção de Responsabilidade</h2>
+            <p>Este website é fornecido "como está" sem garantias de qualquer tipo. A Addecondomínios não oferece garantias explícitas ou implícitas sobre o funcionamento ou o conteúdo deste website.</p>
+            <ol>
+                <li>Nem a Addecondomínios nem seus fornecedores serão responsáveis por qualquer dano resultante do acesso ou uso deste website</li>
+                <li>Qualquer material baixado ou de outra forma obtido através do acesso a este website é feito por sua conta e risco</li>
+            </ol>
+        </div>
+
+        <div class="border-section">
+            <h2>4. Limitações</h2>
+            <p>Em nenhuma circunstância a Addecondomínios ou seus fornecedores serão responsáveis por quaisquer danos decorrentes do uso ou da incapacidade de usar o material neste website.</p>
+        </div>
+
+        <div class="border-section">
+            <h2>5. Precisão dos Materiais</h2>
+            <p>O material exibido neste website pode incluir erros técnicos, tipográficos ou fotográficos. A Addecondomínios não garante que qualquer material neste website é preciso, completo ou atual.</p>
+        </div>
+
+        <div class="border-section">
+            <h2>6. Links</h2>
+            <p>A Addecondomínios não fez revisão de todos os sites vinculados a seu website e não é responsável pelo conteúdo de nenhum site externo.</p>
+        </div>
+
+        <div class="border-section">
+            <h3>Modificações</h3>
+            <p>A Addecondomínios pode revisar estes termos de uso a qualquer momento sem aviso prévio. Ao usar este website, você concorda em estar vinculado pela versão atual destes termos de uso.</p>
+        </div>
+
+        <div class="border-section">
+            <h3>Lei Aplicável</h3>
+            <p>Estes termos de uso serão governado pelas leis do Brasil e jurisdição exclusiva dos tribunais no Estado de São Paulo.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Sobre Addecondomínios</h4>
+                    <p>Especialistas em gestão transparente de condomínios há mais de 15 anos.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>📞 (11) 91489-5831 / (11) 4774-6263</p>
+                    <p>📧 <a href="mailto:addecondominios@hotmail.com">addecondominios@hotmail.com</a></p>
+                    <p>📍 R. Prof. Dimarães Antônio Sandei, 185 - SP</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <p><a href="/">Início</a></p>
+                    <p><a href="/#sobre">Sobre</a></p>
+                    <p><a href="/#aplicativo">Aplicativo</a></p>
+                    <p><a href="/#contato">Contato</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-links">
+                    <a href="/privacy">Política de Privacidade</a>
+                    <a href="/terms">Termos de Uso</a>
+                </div>
+                <p>© 2026 Addecondomínios. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
