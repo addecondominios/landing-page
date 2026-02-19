@@ -107,10 +107,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Addecondomínios. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="/#/privacy" className="text-foreground hover:text-primary transition-colors">
+            <a href="/privacy" className="text-foreground hover:text-primary transition-colors">
               Política de Privacidade
             </a>
-            <a href="/#/terms" className="text-foreground hover:text-primary transition-colors">
+            <a href="/terms" className="text-foreground hover:text-primary transition-colors">
               Termos de Uso
             </a>
           </div>
