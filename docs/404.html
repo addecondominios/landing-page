@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript">
       // SPA routing for GitHub Pages
-      // Convert standard routes to hash routes for HashRouter
+      // Redirect non-root paths to hash routes
       var pathname = window.location.pathname;
-      var baseHref = '/'; // Change if your site is in a subdirectory
       
-      // Remove base href from pathname
-      var path = pathname.replace(new RegExp('^' + baseHref.replace(/\//g, '\\/') + '(?!index\\.html)'), '');
-      
-      // Only redirect if it's not a file (no extension) and not the root
-      if (!path.includes('.') && path && path !== '/') {
-        // Convert /privacy to /#/privacy
-        var hashPath = '/#' + (path.startsWith('/') ? path : '/' + path);
-        var redirect = hashPath + window.location.search + window.location.hash;
-        sessionStorage.redirect = redirect;
-        window.location.replace(baseHref + redirect);
+      // Only process if not root and not index.html
+      if (pathname !== '/' && !pathname.includes('index.html') && !pathname.includes('.')) {
+        // Remove trailing slash and convert to hash route
+        var pathWithoutSlash = pathname.replace(/\/$/, '');
+        if (pathWithoutSlash !== '') {
+          var hashPath = '/#' + pathWithoutSlash;
+          console.log('Redirecting', pathname, 'to', hashPath);
+          window.location.replace(hashPath);
+        }
       }
     </script>
   </head>
   <body>
-    <!-- This page is a catch-all for GitHub Pages SPA routing -->
+    <noscript>
+      <p>This page requires JavaScript to work properly. <a href="/">Go to homepage</a></p>
+    </noscript>
   </body>
 </html>
