@@ -14,6 +14,12 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: "docs",
+    minify: "terser",
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   plugins: [react()].filter(Boolean),
   resolve: {
