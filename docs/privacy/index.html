@@ -118,6 +118,309 @@
             color: hsl(0 0% 98%);
         }
 
+        /* Utility Classes */
+        .flex {
+            display: flex;
+        }
+        
+        .flex-col {
+            flex-direction: column;
+        }
+        
+        .flex-row {
+            flex-direction: row;
+        }
+        
+        .items-center {
+            align-items: center;
+        }
+        
+        .items-start {
+            align-items: flex-start;
+        }
+        
+        .justify-between {
+            justify-content: space-between;
+        }
+        
+        .justify-center {
+            justify-content: center;
+        }
+        
+        .gap-1 {
+            gap: 0.25rem;
+        }
+        
+        .gap-3 {
+            gap: 0.75rem;
+        }
+        
+        .gap-4 {
+            gap: 1rem;
+        }
+        
+        .gap-6 {
+            gap: 1.5rem;
+        }
+        
+        .gap-8 {
+            gap: 2rem;
+        }
+        
+        .gap-12 {
+            gap: 3rem;
+        }
+        
+        .grid {
+            display: grid;
+        }
+        
+        .grid-cols-1 {
+            grid-template-columns: 1fr;
+        }
+        
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .md\:gap-12 {
+                gap: 3rem;
+            }
+            
+            .md\:flex-row {
+                flex-direction: row;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .lg\:gap-12 {
+                gap: 3rem;
+            }
+        }
+        
+        .mt-12 {
+            margin-top: 3rem;
+        }
+        
+        .mb-6 {
+            margin-bottom: 1.5rem;
+        }
+        
+        .pt-8 {
+            padding-top: 2rem;
+        }
+        
+        .py-16 {
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        
+        .px-4 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .sm\:px-8 {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:px-12 {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:px-16 {
+                padding-left: 4rem;
+                padding-right: 4rem;
+            }
+        }
+        
+        @media (min-width: 1280px) {
+            .xl\:px-20 {
+                padding-left: 5rem;
+                padding-right: 5rem;
+            }
+        }
+        
+        @media (min-width: 1536px) {
+            .\2xl\:px-24 {
+                padding-left: 6rem;
+                padding-right: 6rem;
+            }
+        }
+        
+        .w-full {
+            width: 100%;
+        }
+        
+        .w-10 {
+            width: 2.5rem;
+        }
+        
+        .h-10 {
+            height: 2.5rem;
+        }
+        
+        .w-5 {
+            width: 1.25rem;
+        }
+        
+        .h-5 {
+            height: 1.25rem;
+        }
+        
+        .flex-shrink-0 {
+            flex-shrink: 0;
+        }
+        
+        .flex-1 {
+            flex: 1;
+        }
+        
+        .rounded-lg {
+            border-radius: 0.5rem;
+        }
+        
+        .bg-card {
+            background-color: hsl(0 0% 8%);
+        }
+        
+        .bg-muted {
+            background-color: hsl(0 0% 12%);
+        }
+        
+        .bg-primary {
+            background-color: hsl(82 85% 50%);
+        }
+        
+        .text-primary {
+            color: hsl(82 85% 50%);
+        }
+        
+        .text-foreground {
+            color: hsl(0 0% 98%);
+        }
+        
+        .text-primary-foreground {
+            color: hsl(0 0% 5%);
+        }
+        
+        .text-2xl {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        
+        .text-\[10px\] {
+            font-size: 10px;
+        }
+        
+        @media (min-width: 640px) {
+            .sm\:text-xs {
+                font-size: 0.75rem;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .md\:text-sm {
+                font-size: 0.875rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .lg\:text-base {
+                font-size: 1rem;
+            }
+        }
+        
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        
+        .font-bold {
+            font-weight: 700;
+        }
+        
+        .border-t {
+            border-top: 1px solid hsl(0 0% 20%);
+        }
+        
+        .border-border {
+            border-color: hsl(0 0% 20%);
+        }
+        
+        .transition-colors {
+            transition-property: color;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+        }
+        
+        .transition-all {
+            transition-property: all;
+            transition-duration: 0.3s;
+            transition-timing-function: ease;
+        }
+        
+        .duration-300 {
+            transition-duration: 0.3s;
+        }
+        
+        .hover\:bg-primary:hover {
+            background-color: hsl(82 85% 50%);
+        }
+        
+        .hover\:text-primary:hover {
+            color: hsl(82 85% 50%);
+        }
+        
+        .hover\:text-primary-foreground:hover {
+            color: hsl(0 0% 5%);
+        }
+        
+        .space-y-3 > li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .space-y-4 > li {
+            margin-bottom: 1rem;
+        }
+        
+        .break-words {
+            word-break: break-word;
+        }
+        
+        .break-all {
+            word-break: break-all;
+        }
+        
+        @media (min-width: 640px) {
+            .sm\:break-normal {
+                word-break: normal;
+            }
+        }
+        
+        .mt-0\.5 {
+            margin-top: 0.125rem;
+        }
+        
+        .leading-relaxed {
+            line-height: 1.625;
+        }
+        
+        ul {
+            list-style: none;
+        }
+
         /* Main Container */
         .container {
             max-width: 50rem;
@@ -452,60 +755,89 @@
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-grid">
+    <footer class="bg-card border-t border-border">
+        <div class="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
                 <!-- Brand -->
-                <div class="footer-section">
-                    <a href="/" class="footer-brand-link">
-                        <span class="logo-text logo-primary">ADDECON</span>
-                        <span class="logo-text logo-foreground">DOMÍNIOS</span>
+                <div>
+                    <a 
+                        href="/" 
+                        class="flex items-center gap-1 mb-6"
+                    >
+                        <span class="text-2xl text-primary" style="font-family: 'Arbotek, sans-serif'; font-weight: 300">ADDECON</span>
+                        <span class="text-2xl text-foreground" style="font-family: 'Arbotek, sans-serif'; font-weight: 300">DOMÍNIOS</span>
                     </a>
-                    <p>Especialistas em gestão transparente de condomínios há mais de 15 anos.</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/addecon08" class="social-icon" title="Facebook">f</a>
-                        <a href="https://www.instagram.com/addecondominios/" class="social-icon" title="Instagram">📷</a>
-                        <a href="https://api.whatsapp.com/message/T2RUN2KJNEY7C1?autoload=1&app_absent=0" class="social-icon" title="WhatsApp">💬</a>
+                    <p class="text-foreground mb-6 leading-relaxed">
+                        Especialistas em gestão transparente de condomínios há mais de 15 anos.
+                    </p>
+                    <div class="flex gap-3">
+                        <a
+                            href="https://www.facebook.com/addecon08"
+                            class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                            aria-label="Facebook"
+                        >f</a>
+                        <a
+                            href="https://www.instagram.com/addecondominios/"
+                            class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                            aria-label="Instagram"
+                        >📷</a>
+                        <a
+                            href="https://api.whatsapp.com/message/T2RUN2KJNEY7C1?autoload=1&app_absent=0"
+                            class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                            aria-label="WhatsApp"
+                        >💬</a>
                     </div>
                 </div>
 
                 <!-- Quick Links -->
-                <div class="footer-section">
-                    <h4>Links Rápidos</h4>
-                    <ul class="quick-links-list">
-                        <li><a href="/">Sobre Nós</a></li>
-                        <li><a href="/#servicos">Serviços</a></li>
-                        <li><a href="/#aplicativo">Aplicativo</a></li>
-                        <li><a href="/#contato">Contato</a></li>
+                <div>
+                    <h4 class="text-foreground font-bold mb-6">Links Rápidos</h4>
+                    <ul class="space-y-3">
+                        <li><a href="/#sobre" class="text-foreground hover:text-primary transition-colors">Sobre Nós</a></li>
+                        <li><a href="/#servicos" class="text-foreground hover:text-primary transition-colors">Serviços</a></li>
+                        <li><a href="/#aplicativo" class="text-foreground hover:text-primary transition-colors">Aplicativo</a></li>
+                        <li><a href="/#contato" class="text-foreground hover:text-primary transition-colors">Contato</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <ul class="footer-contact-list">
-                        <li class="footer-contact-item">
-                            <span class="contact-icon">📞</span>
-                            <span>(11) 91489-5831 / (11) 4774-6263</span>
+                <div>
+                    <h4 class="text-foreground font-bold mb-6">Contato</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-foreground">
+                            <span class="w-5 h-5 text-primary flex-shrink-0">📞</span>
+                            <span class="text-[10px] sm:text-xs md:text-sm lg:text-base break-words flex-1">
+                                (11) 91489-5831 / (11) 4774-6263
+                            </span>
                         </li>
-                        <li class="footer-contact-item">
-                            <span class="contact-icon">📧</span>
-                            <a href="mailto:addecondominios@hotmail.com">addecondominios@hotmail.com</a>
+                        <li class="flex items-center gap-3 text-foreground">
+                            <span class="w-5 h-5 text-primary flex-shrink-0">📧</span>
+                            <a href="mailto:addecondominios@hotmail.com" class="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1 hover:text-primary transition-colors">
+                                addecondominios@hotmail.com
+                            </a>
                         </li>
-                        <li class="footer-contact-item">
-                            <span class="contact-icon">📍</span>
-                            <span>R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi, SP</span>
+                        <li class="flex items-start gap-3 text-foreground">
+                            <span class="w-5 h-5 text-primary flex-shrink-0 mt-0.5">📍</span>
+                            <span class="text-[10px] sm:text-xs md:text-sm lg:text-base flex-1">
+                                R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi, SP
+                            </span>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <!-- Bottom -->
-            <div class="footer-bottom">
-                <p>© 2026 Addecondomínios. Todos os direitos reservados.</p>
-                <div class="footer-links">
-                    <a href="/privacy">Política de Privacidade</a>
-                    <a href="/terms">Termos de Uso</a>
+            <div class="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-foreground text-sm">
+                    © 2026 Addecondomínios. Todos os direitos reservados.
+                </p>
+                <div class="flex gap-6 text-sm">
+                    <a href="/privacy" class="text-foreground hover:text-primary transition-colors">
+                        Política de Privacidade
+                    </a>
+                    <a href="/terms" class="text-foreground hover:text-primary transition-colors">
+                        Termos de Uso
+                    </a>
                 </div>
             </div>
         </div>
