@@ -19,7 +19,7 @@
         var hashPath = '/#' + (path.startsWith('/') ? path : '/' + path);
         var redirect = hashPath + window.location.search + window.location.hash;
         sessionStorage.redirect = redirect;
-        window.location.replace(baseHref + '?' + new Date().getTime() + redirect);
+        window.location.replace(baseHref + redirect);
       }
     </script>
   </head>
