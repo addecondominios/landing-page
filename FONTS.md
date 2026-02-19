@@ -1,96 +1,64 @@
-# Fontes Utilizadas no Projeto Addecondominios
+﻿# Fontes Utilizadas no Projeto Addecondominios
 
-## 🔗 Links das Fontes
+##  Abordagem Atual: System Fonts (Feb 2025)
 
-### Google Fonts - Josefin Sans
-**URL**: `https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap`
+> **Por que?** GitHub Pages implementa CSP (\Content-Security-Policy: default-src 'none'\) que bloqueia **todas** as requisições HTTP externas, incluindo Google Fonts. Isso é uma limitação **server-side** que não pode ser contornada via código.
 
-**Pesos suportados**:
-- 100 (Thin)
-- 200 (Extra Light)
-- 300 (Light)
-- 400 (Regular)
-- 500 (Medium)
-- 600 (Semi Bold)
-- 700 (Bold)
+### Stack de Fontes
+\\\css
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Roboto', sans-serif;
+\\\
 
-**Estilos**: Normal e Itálico
-
-**Nome da Fonte**: `Josefin Sans`
-
-**Caso de Uso**: Fonte principal do corpo do texto e headings
+### Benefícios
+ **Zero requisições HTTP** - Sem CSP violações  
+ **Máxima performance** - Fontes já no SO do usuário  
+ **Renderização imediata** - Sem FOUT/FOIT  
+ **100% confiável** - Não depende de redes externas  
 
 ---
 
-### Font Local - Arbotek Light Rounded
-**Arquivo**: `fonnts.com-Arbotek_Light_Rounded.otf`
+##  Histórico: Tentativas Anteriores
 
-**Caminho no Projeto**: `/src/assets/fonnts.com-Arbotek_Light_Rounded.otf`
+###  Google Fonts (Bloqueado por CSP)
+Tentado: \@import url('https://fonts.googleapis.com/...')\  
+**Resultado**: CSP bloqueia googleapis.com 
 
-**Caminho em Produção**: `/assets/fonnts.com-Arbotek_Light_Rounded.otf`
+###  Fonte Local em /assets (Bloqueado por CSP)  
+Tentado: \@font-face { src: url('/assets/JosefinSans-Regular.ttf'); }\  
+**Resultado**: CSP bloqueia paths 
 
-**Nome da Fonte**: `Arbotek`
+###  Base64 Embedding (Bloqueado por CSP)
+Tentado: \@font-face { src: url('data:...;base64,...'); }\  
+**Resultado**: CSP trata data URIs como external 
 
-**Formato**: OpenType (.otf)
-
-**Pesos**: 100-900
-
-**Caso de Uso**: Fonte decorativa/complementar
+**Lição**: CSP é header HTTP **server-side** - não pode ser contornado via cliente.
 
 ---
 
-## 📝 Configuração
+##  Configuração Atual (src/index.css)
 
-### No CSS (src/index.css)
-```css
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+\\\css
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-@font-face {
-  font-family: 'Arbotek';
-  src: url('/assets/fonnts.com-Arbotek_Light_Rounded.otf') format('opentype');
-  font-weight: 100 900;
-  font-style: normal;
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Roboto', sans-serif;
 }
-```
-
-### No Tailwind Config (tailwind.config.ts)
-```typescript
-extend: {
-  fontFamily: {
-    montserrat: ["Josefin Sans", "sans-serif"],
-  },
-}
-```
+\\\
 
 ---
 
-## ✅ Verificação de Fontes
+##  Se Precisar de Fonts Customizadas
 
-Para testar se as fontes são carregadas corretamente:
-
-1. **Abra o DevTools** (F12)
-2. **Vá para aba "Network"**
-3. **Procure por**: 
-   - `fonts.googleapis.com` - Deve retornar **200 OK**
-   - `fonnts.com-Arbotek_Light_Rounded.otf` - Deve retornar **200 OK**
-4. **Vá para aba "Console"** - Não deve haver erros 404 relacionados a fontes
+### Opção: Migrar para Netlify ou Vercel
+Ambos permitem custom CSP headers.
+\\\
+Content-Security-Policy: default-src 'self'; font-src 'self' https://fonts.googleapis.com;
+\\\
 
 ---
 
-## 🔍 Solução de Problemas
-
-### Se aparecer erro 404 da Arbotek:
-- Verificar se o arquivo existe em `/src/assets/`
-- Confirmar que o build está gerando em `/docs/assets/`
-- Executar: `npm run build && npm run preview`
-
-### Se aparecer erro 404 do Google Fonts:
-- Verificar conexão com internet
-- Confirmar URL está correta em `src/index.css`
-- Pode ser bloqueado por CSP (veja AUDITORIA.md)
-
-### Fallback de Fontes:
-Se as fontes externas não carregarem:
-```css
-font-family: "Josefin Sans", system-ui, -apple-system, sans-serif;
-```
+##  Referências CSP
+- [MDN: Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+- [GitHub Pages Documentation](https://docs.github.com/en/pages)
