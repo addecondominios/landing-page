@@ -11,6 +11,7 @@ export interface ContactInfo {
 
 interface FooterContactProps {
   contactInfo?: ContactInfo[];
+  isSecondaryPage?: boolean;
 }
 
 const DEFAULT_CONTACT_INFO: ContactInfo[] = [
@@ -35,7 +36,7 @@ const DEFAULT_CONTACT_INFO: ContactInfo[] = [
   },
 ];
 
-const FooterContact = ({ contactInfo = DEFAULT_CONTACT_INFO }: FooterContactProps) => {
+const FooterContact = ({ contactInfo = DEFAULT_CONTACT_INFO, isSecondaryPage = false }: FooterContactProps) => {
   return (
     <div>
       <h4 className="text-foreground font-bold mb-6">Contato</h4>
@@ -46,7 +47,11 @@ const FooterContact = ({ contactInfo = DEFAULT_CONTACT_INFO }: FooterContactProp
             className={`flex items-${item.type === "address" ? "start" : "center"} gap-3 text-foreground`}
           >
             <item.icon className={`w-5 h-5 text-primary flex-shrink-0 ${item.type === "address" ? "mt-0.5" : ""}`} />
-            {item.href ? (
+            {item.type === "email" ? (
+              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base flex-1">
+                {item.value}
+              </span>
+            ) : item.href ? (
               <a 
                 href={item.href}
                 className="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1 hover:text-primary transition-colors"

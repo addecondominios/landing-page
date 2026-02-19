@@ -14,6 +14,7 @@ interface FooterProps {
   companyName?: string;
   year?: number;
   onQuickLinkClick?: (href: string, e: React.MouseEvent) => void;
+  isSecondaryPage?: boolean;
 }
 
 const Footer = ({
@@ -24,6 +25,7 @@ const Footer = ({
   companyName = "Addecondomínios",
   year = new Date().getFullYear(),
   onQuickLinkClick,
+  isSecondaryPage = false,
 }: FooterProps) => {
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -36,8 +38,10 @@ const Footer = ({
           <FooterBrand onLogoClick={handleLogoClick} />
           <FooterSocialLinks links={socialLinks} />
         </div>
-        <FooterQuickLinks links={quickLinks} onLinkClick={onQuickLinkClick} />
-        <FooterContact contactInfo={contactInfo} />
+        {!isSecondaryPage && (
+          <FooterQuickLinks links={quickLinks} onLinkClick={onQuickLinkClick} />
+        )}
+        <FooterContact contactInfo={contactInfo} isSecondaryPage={isSecondaryPage} />
       </FooterSection>
       <FooterBottom
         year={year}
