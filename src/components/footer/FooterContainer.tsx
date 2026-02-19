@@ -1,3 +1,5 @@
+import React from 'react';
+
 interface FooterContainerProps {
   children: React.ReactNode;
 }

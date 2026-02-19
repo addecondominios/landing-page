@@ -1,3 +1,5 @@
+import React from 'react';
+
 const TermsOfService = () => {
   return (
     <section className="min-h-screen pt-32 pb-16 bg-background">

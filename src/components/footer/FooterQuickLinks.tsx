@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface QuickLink {
   label: string;
   href: string;

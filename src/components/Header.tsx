@@ -65,8 +65,8 @@ const Header = () => {
           {/* Logo - Center */}
           <div className="absolute left-1/2 transform -translate-x-1/2 flex items-baseline gap-3 select-none pointer-events-none">
             <div className="flex items-center">
-              <span className="text-2xl text-primary" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>ADDECON</span>
-              <span className="text-2xl text-foreground" style={{ fontFamily: 'Arbotek, sans-serif', fontWeight: 300 }}>DOMÍNIOS</span>
+              <span className="text-2xl text-primary font-arbotek font-light">ADDECON</span>
+              <span className="text-2xl text-foreground font-arbotek font-light">DOMÍNIOS</span>
             </div>
           </div>
 

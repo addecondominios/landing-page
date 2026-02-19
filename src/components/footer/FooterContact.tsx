@@ -1,3 +1,4 @@
+import React from 'react';
 import { Phone, Mail, MapPin, LucideIcon } from "lucide-react";
 
 export interface ContactInfo {

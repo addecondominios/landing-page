@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface FooterBottomLink {
   label: string;
   href: string;

@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'DMSans';
-  src: url('/assets/DMSans-Light.ttf') format('truetype');
+  src: url('/DMSans-Light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'DMSans';
-  src: url('/assets/DMSans-Regular.ttf') format('truetype');
+  src: url('/DMSans-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,9 +20,17 @@
 
 @font-face {
   font-family: 'DMSans';
-  src: url('/assets/DMSans-Italic.ttf') format('truetype');
+  src: url('/DMSans-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arbotek';
+  src: url('/fonnts.com-Arbotek_Light_Rounded.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
   font-display: swap;
 }
 
@@ -193,5 +201,9 @@
       linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
+  }
+
+  .font-arbotek {
+    font-family: 'Arbotek', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
   }
 }

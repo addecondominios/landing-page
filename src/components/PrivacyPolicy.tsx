@@ -1,3 +1,5 @@
+import React from 'react';
+
 const PrivacyPolicy = () => {
   return (
     <section className="min-h-screen pt-32 pb-16 bg-background">

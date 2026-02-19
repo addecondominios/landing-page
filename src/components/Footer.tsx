@@ -1,16 +1,10 @@
-import {
-  FooterBrand,
-  FooterSocialLinks,
-  FooterQuickLinks,
-  FooterContact,
-  FooterBottom,
-  FooterContainer,
-  FooterSection,
-  type SocialLink,
-  type QuickLink,
-  type ContactInfo,
-  type FooterBottomLink,
-} from "@/components/footer";
+import FooterBrand from "@/components/footer/FooterBrand";
+import FooterSocialLinks, { type SocialLink } from "@/components/footer/FooterSocialLinks";
+import FooterQuickLinks, { type QuickLink } from "@/components/footer/FooterQuickLinks";
+import FooterContact, { type ContactInfo } from "@/components/footer/FooterContact";
+import FooterBottom, { type FooterBottomLink } from "@/components/footer/FooterBottom";
+import FooterContainer from "@/components/footer/FooterContainer";
+import FooterSection from "@/components/footer/FooterSection";
 
 interface FooterProps {
   socialLinks?: SocialLink[];

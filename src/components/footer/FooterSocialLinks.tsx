@@ -1,3 +1,4 @@
+import React from 'react';
 import { Facebook, Instagram, Phone } from "lucide-react";
 import { LucideIcon } from "lucide-react";
 
