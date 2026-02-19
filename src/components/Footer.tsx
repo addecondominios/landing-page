@@ -87,9 +87,9 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-foreground">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1">
+                <a href="mailto:addecondominios@hotmail.com" className="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1 hover:text-primary transition-colors">
                   addecondominios@hotmail.com
-                </span>
+                </a>
               </li>
               <li className="flex items-start gap-3 text-foreground">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -107,10 +107,10 @@ const Footer = () => {
             © {new Date().getFullYear()} Addecondomínios. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <a href="/#/privacy" className="text-foreground hover:text-primary transition-colors">
               Política de Privacidade
             </a>
-            <a href="#" className="text-foreground hover:text-primary transition-colors">
+            <a href="/#/terms" className="text-foreground hover:text-primary transition-colors">
               Termos de Uso
             </a>
           </div>

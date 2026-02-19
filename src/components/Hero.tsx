@@ -57,9 +57,11 @@ const Hero = () => {
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: '0.5s' }}>
-            <div className="flex flex-col items-center p-6 rounded-2xl bg-card/50 border border-border glow-primary">
-              <Building2 className="w-8 h-8 text-primary mb-3" />
-              <span className="text-base text-foreground text-center"><span className="text-white font-bold">Em toda a região metropolitana e interior de São Paulo</span></span>
+            <div className="flex flex-col items-center justify-center p-8 rounded-2xl bg-card/50 border border-border glow-primary h-full">
+              <Building2 className="w-8 h-8 text-primary mb-4" />
+              <span className="text-sm md:text-base text-foreground text-center leading-relaxed">
+                <span className="text-white font-bold">Atendemos em toda a região<br />metropolitana e interior<br />de São Paulo</span>
+              </span>
             </div>
             <div className="flex flex-col items-center p-6 rounded-2xl bg-card/50 border border-border">
               <Users className="w-8 h-8 text-primary mb-3" />

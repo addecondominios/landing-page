@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import edificioLogo from "@/assets/EDIFICIO.png";
 
 const Header = () => {
@@ -9,7 +9,6 @@ const Header = () => {
   const navLinks = [
     { href: "#sobre", label: "Sobre" },
     { href: "#aplicativo", label: "Aplicativo" },
-    { href: "#contato", label: "Fale Conosco" },
   ];
 
   const scrollToSection = (href: string, e?: React.MouseEvent) => {
@@ -65,13 +64,6 @@ const Header = () => {
           {/* CTA Button - Right */}
           <div className="flex items-center">
             <div className="hidden md:flex items-center gap-4">
-              <a 
-                href="tel:+5511914895831" 
-                className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
-                aria-label="Ligar para ADDECON"
-              >
-                <Phone className="w-5 h-5" />
-              </a>
               <a 
                 href="#contato"
                 onClick={(e) => scrollToSection('#contato', e)}
