@@ -11,10 +11,14 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: "DMSans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            background: #0d0d0d;
-            color: #fafaf8;
+            background: hsl(0 0% 5%);
+            color: hsl(0 0% 98%);
             line-height: 1.6;
         }
 
@@ -22,12 +26,14 @@
             font-family: 'DMSans';
             src: url('/assets/DMSans-Light.ttf') format('truetype');
             font-weight: 300;
+            font-display: swap;
         }
 
         @font-face {
             font-family: 'DMSans';
             src: url('/assets/DMSans-Regular.ttf') format('truetype');
             font-weight: 400;
+            font-display: swap;
         }
 
         @font-face {
@@ -35,21 +41,54 @@
             src: url('/assets/DMSans-Italic.ttf') format('truetype');
             font-weight: 400;
             font-style: italic;
+            font-display: swap;
         }
 
-        .logo-bar {
+        .header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            padding: 1.5rem 2rem;
-            border-bottom: 1px solid #2d2d2d;
+            justify-content: flex-start;
+            gap: 2rem;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid hsl(0 0% 20%);
+            position: relative;
+        }
+
+        .back-button {
+            padding: 0.75rem 2rem;
+            background: hsl(82 85% 50%);
+            color: hsl(0 0% 5%);
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            font-family: "DMSans", sans-serif;
+            box-shadow: 0 10px 15px -3px rgba(82, 213, 82, 0.25);
+        }
+
+        .back-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(82, 213, 82, 0.4);
+        }
+
+        .logo-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .logo-link {
             text-decoration: none;
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            align-items: baseline;
+            gap: 0.25rem;
+            cursor: pointer;
         }
 
         .logo-text {
@@ -59,72 +98,58 @@
         }
 
         .logo-primary {
-            color: #52d552;
+            color: hsl(82 85% 50%);
         }
 
         .logo-foreground {
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
         }
 
-        .back-button {
-            padding: 0.5rem 1rem;
-            background: #52d552;
-            color: #0d0d0d;
-            border: none;
-            border-radius: 0.375rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            font-family: "DMSans", sans-serif;
-        }
-
-        .back-button:hover {
-            background: #46b346;
+        .logo-link:hover .logo-primary {
+            opacity: 0.8;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 3rem 1.5rem;
-            min-height: calc(100vh - 200px);
+            min-height: calc(100vh - 300px);
         }
 
         h1 {
             font-size: 2.5rem;
             margin-bottom: 2rem;
-            color: #52d552;
+            color: hsl(82 85% 50%);
         }
 
         h2 {
             font-size: 1.5rem;
             margin-top: 2rem;
             margin-bottom: 1rem;
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
         }
 
         h3 {
             font-size: 1.1rem;
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
         }
 
         p {
             margin-bottom: 1rem;
             line-height: 1.8;
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
         }
 
         a {
-            color: #52d552;
+            color: hsl(82 85% 50%);
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         a:hover {
-            color: #7ee87e;
+            color: hsl(82 90% 60%);
         }
 
         ul, ol {
@@ -137,20 +162,20 @@
         }
 
         .border-section {
-            border-top: 1px solid #2d2d2d;
+            border-top: 1px solid hsl(0 0% 20%);
             padding-top: 3rem;
             margin-top: 3rem;
         }
 
         .footer {
-            background: #1a1a1a;
-            border-top: 1px solid #2d2d2d;
+            background: hsl(0 0% 8%);
+            border-top: 1px solid hsl(0 0% 20%);
             padding: 4rem 1.5rem 2rem;
             margin-top: 4rem;
         }
 
         .footer-content {
-            max-width: 1400px;
+            max-width: 90rem;
             margin: 0 auto;
         }
 
@@ -162,14 +187,48 @@
         }
 
         .footer-section h4 {
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 1rem;
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
         }
 
-        .footer-section p, .footer-section a {
+        .footer-section p {
             font-size: 0.95rem;
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a {
+            color: hsl(0 0% 98%);
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: hsl(82 85% 50%);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .social-icon {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 0.5rem;
+            background: hsl(0 0% 12%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: hsl(0 0% 98%);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: hsl(82 85% 50%);
+            color: hsl(0 0% 5%);
         }
 
         .footer-links {
@@ -177,10 +236,19 @@
             gap: 1.5rem;
             flex-wrap: wrap;
             font-size: 0.9rem;
+            justify-content: center;
+        }
+
+        .footer-links a {
+            color: hsl(0 0% 98%);
+        }
+
+        .footer-links a:hover {
+            color: hsl(82 85% 50%);
         }
 
         .footer-bottom {
-            border-top: 1px solid #2d2d2d;
+            border-top: 1px solid hsl(0 0% 20%);
             padding-top: 2rem;
             display: flex;
             flex-direction: column;
@@ -188,14 +256,62 @@
             align-items: center;
             text-align: center;
             font-size: 0.9rem;
-            color: #fafaf8;
+            color: hsl(0 0% 98%);
+        }
+
+        .footer-contact-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-contact-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            margin-top: 0.125rem;
+        }
+
+        .quick-links-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .quick-links-list li {
+            margin-bottom: 0.75rem;
+        }
+
+        .quick-links-list a {
+            color: hsl(0 0% 98%);
+        }
+
+        .quick-links-list a:hover {
+            color: hsl(82 85% 50%);
         }
 
         @media (max-width: 768px) {
-            .logo-bar {
+            .header {
                 flex-direction: column;
                 gap: 1rem;
-                text-align: center;
+                align-items: center;
+            }
+
+            .logo-center {
+                position: static;
+                transform: none;
+                order: 2;
+                width: 100%;
+            }
+
+            .back-button {
+                order: 1;
+                width: 100%;
+                justify-content: center;
             }
 
             h1 {
@@ -209,18 +325,27 @@
             .container {
                 padding: 2rem 1rem;
             }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="logo-bar">
-        <a href="/" class="logo-link">
-            <span class="logo-text logo-primary">ADDECON</span>
-            <span class="logo-text logo-foreground">DOMÍNIOS</span>
-        </a>
+    <!-- Header -->
+    <div class="header">
         <a href="/" class="back-button">← Voltar</a>
+        <div class="logo-center">
+            <a href="/" class="logo-link">
+                <span class="logo-text logo-primary">ADDECON</span>
+                <span class="logo-text logo-foreground">DOMÍNIOS</span>
+            </a>
+        </div>
     </div>
 
+    <!-- Main Content -->
     <div class="container">
         <h1>Termos de Uso</h1>
 
@@ -276,34 +401,64 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-grid">
-                <div class="footer-section">
-                    <h4>Sobre Addecondomínios</h4>
-                    <p>Especialistas em gestão transparente de condomínios há mais de 15 anos.</p>
+                <!-- Brand -->
+                <div>
+                    <a href="/" class="logo-link" style="margin-bottom: 1rem;">
+                        <span class="logo-text logo-primary">ADDECON</span>
+                        <span class="logo-text logo-foreground">DOMÍNIOS</span>
+                    </a>
+                    <p style="margin-bottom: 1rem;">
+                        Especialistas em gestão transparente de condomínios há mais de 15 anos.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/addecon08" class="social-icon" aria-label="Facebook">f</a>
+                        <a href="https://www.instagram.com/addecondominios/" class="social-icon" aria-label="Instagram">📷</a>
+                        <a href="https://api.whatsapp.com/message/T2RUN2KJNEY7C1?autoload=1&app_absent=0" class="social-icon" aria-label="WhatsApp">💬</a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Contato</h4>
-                    <p>📞 (11) 91489-5831 / (11) 4774-6263</p>
-                    <p>📧 <a href="mailto:addecondominios@hotmail.com">addecondominios@hotmail.com</a></p>
-                    <p>📍 R. Prof. Dimarães Antônio Sandei, 185 - SP</p>
-                </div>
-                <div class="footer-section">
+
+                <!-- Quick Links -->
+                <div>
                     <h4>Links Rápidos</h4>
-                    <p><a href="/">Início</a></p>
-                    <p><a href="/#sobre">Sobre</a></p>
-                    <p><a href="/#aplicativo">Aplicativo</a></p>
-                    <p><a href="/#contato">Contato</a></p>
+                    <ul class="quick-links-list">
+                        <li><a href="/">Sobre Nós</a></li>
+                        <li><a href="/#servicos">Serviços</a></li>
+                        <li><a href="/#aplicativo">Aplicativo</a></li>
+                        <li><a href="/#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4>Contato</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <span class="contact-icon">📞</span>
+                            <span>(11) 91489-5831 / (11) 4774-6263</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📧</span>
+                            <a href="mailto:addecondominios@hotmail.com">addecondominios@hotmail.com</a>
+                        </li>
+                        <li>
+                            <span class="contact-icon">📍</span>
+                            <span>R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi, SP</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
+            <!-- Bottom -->
             <div class="footer-bottom">
+                <p>© 2026 Addecondomínios. Todos os direitos reservados.</p>
                 <div class="footer-links">
                     <a href="/privacy">Política de Privacidade</a>
                     <a href="/terms">Termos de Uso</a>
                 </div>
-                <p>© 2026 Addecondomínios. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
