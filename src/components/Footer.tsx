@@ -77,7 +77,7 @@ const Footer = () => {
               <li className="flex items-start gap-3 text-foreground">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-[10px] sm:text-xs md:text-sm lg:text-base flex-1">
-                  R. Prof. Dimarães Antônio Sandei, 185 - Itapevi, SP
+                  R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi, SP
                 </span>
               </li>
             </ul>

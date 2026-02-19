@@ -81,7 +81,8 @@ const AppSection = () => {
                 <div className="w-full h-full rounded-[2.5rem] overflow-hidden">
                   <img 
                     src={appScreenshot} 
-                    alt="ADDECON App" 
+                    alt="Interface do App ADDECON - Gestão de condomínios: 2ª via boleto, documentos, assembleia online, enquetes"
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>

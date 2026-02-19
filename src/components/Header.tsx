@@ -54,10 +54,20 @@ const Header = () => {
           {/* CTA Button - Right */}
           <div className="flex items-center">
             <div className="hidden md:flex items-center gap-4">
-              <a href="tel:+5511aaaaaa999" className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors">
-
+              <a 
+                href="tel:+5511914895831" 
+                className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                aria-label="Ligar para ADDECON"
+              >
+                <Phone className="w-5 h-5" />
               </a>
-              <a href="#contato">
+              <a href="#contato"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const element = document.getElementById('contato');
+                  element?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
                 <Button variant="hero" size="lg">
                   Fale Conosco
                 </Button>
