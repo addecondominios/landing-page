@@ -6,19 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script type="text/javascript">
       // SPA routing for GitHub Pages
-      // Redirect to index.html with the path preserved in the query string
+      // Convert standard routes to hash routes for HashRouter
       var pathname = window.location.pathname;
-      var search = window.location.search;
+      var baseHref = '/'; // Change if your site is in a subdirectory
       
-      // Only redirect if it's not a file (no extension)
-      if (!pathname.includes('.') && pathname !== '/') {
-        var redirect = pathname + (search || '') + window.location.hash;
+      // Remove base href from pathname
+      var path = pathname.replace(new RegExp('^' + baseHref.replace(/\//g, '\\/') + '(?!index\\.html)'), '');
+      
+      // Only redirect if it's not a file (no extension) and not the root
+      if (!path.includes('.') && path && path !== '/') {
+        // Convert /privacy to /#/privacy
+        var hashPath = '/#' + (path.startsWith('/') ? path : '/' + path);
+        var redirect = hashPath + window.location.search + window.location.hash;
         sessionStorage.redirect = redirect;
-      }
-      
-      // If we have a redirect saved, use it
-      if (sessionStorage.redirect && sessionStorage.redirect !== window.location.pathname) {
-        window.location.replace(window.location.href.split(pathname)[0] + sessionStorage.redirect);
+        window.location.replace(baseHref + '?' + new Date().getTime() + redirect);
       }
     </script>
   </head>
