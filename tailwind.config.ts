@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        montserrat: ["Josefin Sans", "sans-serif"],
+        sans: ['DMSans', 'sans-serif'],
+        dmsans: ['DMSans', 'sans-serif'],
       },
       colors: {
         border: "hsl(var(--border))",
