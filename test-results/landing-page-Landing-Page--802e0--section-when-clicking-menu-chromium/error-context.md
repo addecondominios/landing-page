@@ -1,0 +1,345 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - generic [ref=e6]:
+        - generic [ref=e7]:
+          - button [active] [ref=e8] [cursor=pointer]:
+            - img [ref=e9]
+          - navigation [ref=e13]:
+            - link "Sobre" [ref=e14] [cursor=pointer]:
+              - /url: "#sobre"
+            - link "Aplicativo" [ref=e15] [cursor=pointer]:
+              - /url: "#aplicativo"
+        - generic:
+          - generic:
+            - generic: ADDECON
+            - generic: DOMÍNIOS
+        - generic [ref=e17]:
+          - link "Ligar para ADDECON" [ref=e18] [cursor=pointer]:
+            - /url: tel:+5511914895831
+            - img [ref=e19]
+          - link "Fale Conosco" [ref=e21] [cursor=pointer]:
+            - /url: "#contato"
+            - button "Fale Conosco" [ref=e22]
+    - main [ref=e23]:
+      - generic [ref=e30]:
+        - generic [ref=e33]: +15 anos de experiência
+        - img "Addecon Domínios" [ref=e35]
+        - paragraph [ref=e36]: Administradora de Condomínios
+        - paragraph [ref=e37]: Gestão transparente e eficiente para o seu condomínio. Mais de 50 condomínios gerenciados na região metropolitana de São Paulo.
+        - generic [ref=e38]:
+          - link "Solicitar Orçamento" [ref=e39] [cursor=pointer]:
+            - /url: https://wa.me/5511914895831?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento
+            - text: Solicitar Orçamento
+            - img
+          - link "Conheça Nossos Serviços" [ref=e40] [cursor=pointer]:
+            - /url: "#servicos"
+            - generic [ref=e41]: Conheça Nossos Serviços
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - img [ref=e44]
+            - generic [ref=e48]: Em toda a região metropolitana e interior de São Paulo
+          - generic [ref=e49]:
+            - img [ref=e50]
+            - generic [ref=e55]: 15+
+            - generic [ref=e56]: Anos de Experiência
+          - generic [ref=e57]:
+            - img [ref=e58]
+            - generic [ref=e60]: 100%
+            - generic [ref=e61]: Transparência
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - text: Sobre Nós
+          - heading "Especialistas em Gestão Condominial" [level=2] [ref=e66]
+          - paragraph [ref=e67]: Somos especialistas em gestão transparente, há mais de 15 anos no mercado administrativo condominial desburocratizando o acesso às informações.
+        - generic [ref=e68]:
+          - generic [ref=e70]:
+            - img "Equipe de especialistas em gestão condominial - ADDECON Domínios" [ref=e71]
+            - generic [ref=e73]:
+              - generic [ref=e74]:
+                - generic [ref=e75]: "+15"
+                - paragraph [ref=e76]: Anos de experiência
+                - paragraph [ref=e77]: administrando condomínios e pessoas
+              - img "Logo ADDECON Domínios" [ref=e79]
+          - generic [ref=e81]:
+            - paragraph [ref=e82]: Possuímos como pilares a qualidade, eficiência, honestidade e comodidade de nossos serviços com os condomínios.
+            - paragraph [ref=e83]: Sendo uma das maiores administradoras de Itapevi e região, atuando em toda a região metropolitana e interior de São Paulo.
+            - generic [ref=e84]:
+              - generic [ref=e85]: Transparência
+              - generic [ref=e86]: Qualidade
+              - generic [ref=e87]: Eficiência
+              - generic [ref=e88]: Confiança
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - img [ref=e92]
+            - heading "Missão" [level=3] [ref=e96]
+            - paragraph [ref=e97]: Nossa missão é entregar qualidade de forma eficaz e transparente, democratizar acesso às informações condominiais e estabelecer um padrão de qualidade nos serviços prestados.
+          - generic [ref=e98]:
+            - img [ref=e100]
+            - heading "Visão" [level=3] [ref=e103]
+            - paragraph [ref=e104]: Trazer inovações tecnológicas na administração condominial, aumentando a produtividade e facilitando o contato entre prestador e cliente.
+          - generic [ref=e105]:
+            - img [ref=e107]
+            - heading "Valores" [level=3] [ref=e109]
+            - paragraph [ref=e110]: Valorizamos fornecer o melhor serviço, cuidar com zelo do patrimônio, sempre trabalhando com honestidade e transparência.
+      - generic [ref=e112]:
+        - generic [ref=e113]:
+          - text: Nossos Serviços
+          - heading "Soluções Completas" [level=2] [ref=e114]
+          - paragraph [ref=e115]: Oferecemos uma gama completa de serviços para a administração eficiente e transparente do seu condomínio.
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - img [ref=e119]
+            - heading "Apoio ao Síndico" [level=3] [ref=e124]
+            - paragraph [ref=e125]: Trabalhamos apoiando seu plano de trabalho e direcionando para resultados inovadores.
+            - list [ref=e126]:
+              - listitem [ref=e127]:
+                - img [ref=e128]
+                - text: Convocar assembleias
+              - listitem [ref=e131]:
+                - img [ref=e132]
+                - text: Cumprimento das regras da convenção
+              - listitem [ref=e135]:
+                - img [ref=e136]
+                - text: Cobrança de contribuições
+              - listitem [ref=e139]:
+                - img [ref=e140]
+                - text: Manutenção das áreas comuns
+          - generic [ref=e143]:
+            - img [ref=e145]
+            - heading "Assessoria Financeira" [level=3] [ref=e147]
+            - paragraph [ref=e148]: Suporte completo na gestão financeira do seu condomínio.
+            - list [ref=e149]:
+              - listitem [ref=e150]:
+                - img [ref=e151]
+                - text: Planejamento financeiro
+              - listitem [ref=e154]:
+                - img [ref=e155]
+                - text: Controle de cotas condominiais
+              - listitem [ref=e158]:
+                - img [ref=e159]
+                - text: Gerenciamento bancário
+              - listitem [ref=e162]:
+                - img [ref=e163]
+                - text: Demonstrativos financeiros
+          - generic [ref=e166]:
+            - img [ref=e168]
+            - heading "Assessoria Condominial" [level=3] [ref=e171]
+            - paragraph [ref=e172]: Assessoria direta ao bom cumprimento das obrigações legais.
+            - list [ref=e173]:
+              - listitem [ref=e174]:
+                - img [ref=e175]
+                - text: Gestão de conflitos
+              - listitem [ref=e178]:
+                - img [ref=e179]
+                - text: Elaboração de documentos
+              - listitem [ref=e182]:
+                - img [ref=e183]
+                - text: Realização de assembleias
+              - listitem [ref=e186]:
+                - img [ref=e187]
+                - text: Atendimento direto
+          - generic [ref=e190]:
+            - img [ref=e192]
+            - heading "Gestão de RH" [level=3] [ref=e195]
+            - paragraph [ref=e196]: Administração completa do quadro de funcionários.
+            - list [ref=e197]:
+              - listitem [ref=e198]:
+                - img [ref=e199]
+                - text: Contratação de funcionários
+              - listitem [ref=e202]:
+                - img [ref=e203]
+                - text: Folha de pagamento
+              - listitem [ref=e206]:
+                - img [ref=e207]
+                - text: Rescisões e férias
+              - listitem [ref=e210]:
+                - img [ref=e211]
+                - text: Gestão de benefícios
+          - generic [ref=e214]:
+            - img [ref=e216]
+            - heading "Assessoria Jurídica" [level=3] [ref=e220]
+            - paragraph [ref=e221]: Suporte jurídico especializado para condomínios.
+            - list [ref=e222]:
+              - listitem [ref=e223]:
+                - img [ref=e224]
+                - text: Consultoria legal
+              - listitem [ref=e227]:
+                - img [ref=e228]
+                - text: Análise de contratos
+              - listitem [ref=e231]:
+                - img [ref=e232]
+                - text: Defesa jurídica
+              - listitem [ref=e235]:
+                - img [ref=e236]
+                - text: Cobranças judiciais
+          - generic [ref=e239]:
+            - img [ref=e241]
+            - heading "Manutenção" [level=3] [ref=e243]
+            - paragraph [ref=e244]: Serviços completos de manutenção predial.
+            - list [ref=e245]:
+              - listitem [ref=e246]:
+                - img [ref=e247]
+                - text: Manutenção preventiva
+              - listitem [ref=e250]:
+                - img [ref=e251]
+                - text: Reformas e melhorias
+              - listitem [ref=e254]:
+                - img [ref=e255]
+                - text: Automação predial
+              - listitem [ref=e258]:
+                - img [ref=e259]
+                - text: Consultoria arquitetônica
+      - generic [ref=e265]:
+        - generic [ref=e266]:
+          - text: Aplicativo
+          - heading "Informação na palma da sua mão" [level=2] [ref=e267]
+          - paragraph [ref=e268]: Acesse a prestação de contas, atas e documentos do condomínio pelo nosso app. Tudo em um só clique!
+          - generic [ref=e269]:
+            - generic [ref=e270]:
+              - img [ref=e272]
+              - generic [ref=e275]: 2ª via de Boleto
+            - generic [ref=e276]:
+              - img [ref=e278]
+              - generic [ref=e281]: Documentos do condomínio
+            - generic [ref=e282]:
+              - img [ref=e284]
+              - generic [ref=e287]: Assembleia Online
+            - generic [ref=e288]:
+              - img [ref=e290]
+              - generic [ref=e292]: Enquetes e Reclamações
+            - generic [ref=e293]:
+              - img [ref=e295]
+              - generic [ref=e297]: Reserva de área comum
+            - generic [ref=e298]:
+              - img [ref=e300]
+              - generic [ref=e302]: Críticas e sugestões
+          - generic [ref=e303]:
+            - link "Download iOS" [ref=e304] [cursor=pointer]:
+              - /url: https://apps.apple.com/br/app/point-condom%C3%ADnio/id1287365436
+              - img
+              - text: Download iOS
+            - link "Download Android" [ref=e305] [cursor=pointer]:
+              - /url: https://play.google.com/store/apps/details?id=com.pointcondominio.condominio&hl=pt
+              - img
+              - text: Download Android
+        - generic [ref=e307]:
+          - 'img "Interface do App ADDECON - Gestão de condomínios: 2ª via boleto, documentos, assembleia online, enquetes" [ref=e311]'
+          - img [ref=e313]
+          - img [ref=e317]
+      - generic [ref=e321]:
+        - generic [ref=e322]:
+          - text: Contato
+          - heading "Entre em Contato" [level=2] [ref=e323]
+          - paragraph [ref=e324]: Estamos prontos para atender você e seu condomínio. Entre em contato conosco!
+        - generic [ref=e325]:
+          - generic [ref=e326]:
+            - generic [ref=e327]:
+              - link "Telefone / WhatsApp (11) 91489-5831 / (11) 4774-6263" [ref=e328] [cursor=pointer]:
+                - /url: https://wa.me/5511914895831
+                - generic [ref=e329]:
+                  - img [ref=e331]
+                  - paragraph [ref=e333]: Telefone / WhatsApp
+                  - paragraph [ref=e334]: (11) 91489-5831 / (11) 4774-6263
+              - link "E-mail addecondominios@hotmail.com" [ref=e335] [cursor=pointer]:
+                - /url: mailto:addecondominios@hotmail.com
+                - generic [ref=e336]:
+                  - img [ref=e338]
+                  - paragraph [ref=e341]: E-mail
+                  - paragraph [ref=e342]: addecondominios@hotmail.com
+              - link "Endereço R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi - SP" [ref=e343] [cursor=pointer]:
+                - /url: https://www.google.com/maps/dir/?api=1&destination=R.+Prof.+Dimarães+Antônio+Sandei,+185+-+Cidade+da+Saude,+Itapevi+-+SP,+06693-130
+                - generic [ref=e344]:
+                  - img [ref=e346]
+                  - paragraph [ref=e349]: Endereço
+                  - paragraph [ref=e350]: R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi - SP
+              - 'link "Horário Seg – Sex: 9h às 17h" [ref=e351] [cursor=pointer]':
+                - /url: "#"
+                - generic [ref=e352]:
+                  - img [ref=e354]
+                  - paragraph [ref=e357]: Horário
+                  - paragraph [ref=e358]: "Seg – Sex: 9h às 17h"
+            - iframe [ref=e360]
+          - generic [ref=e361]:
+            - heading "Envie uma mensagem" [level=3] [ref=e362]
+            - generic [ref=e363]:
+              - generic [ref=e364]:
+                - generic [ref=e365]: Nome *
+                - textbox "Nome *" [ref=e366]:
+                  - /placeholder: Seu nome
+              - generic [ref=e367]:
+                - generic [ref=e368]:
+                  - generic [ref=e369]: E-mail *
+                  - textbox "E-mail *" [ref=e370]:
+                    - /placeholder: seu@email.com
+                - generic [ref=e371]:
+                  - generic [ref=e372]: Telefone
+                  - textbox "Telefone" [ref=e373]:
+                    - /placeholder: (11) 99999-9999
+              - generic [ref=e374]:
+                - generic [ref=e375]: Mensagem *
+                - textbox "Mensagem *" [ref=e376]:
+                  - /placeholder: Como podemos ajudar?
+              - button "Enviar Mensagem" [ref=e377] [cursor=pointer]:
+                - img
+                - text: Enviar Mensagem
+    - contentinfo [ref=e378]:
+      - generic [ref=e379]:
+        - generic [ref=e380]:
+          - generic [ref=e381]:
+            - link "ADDECON DOMÍNIOS" [ref=e382] [cursor=pointer]:
+              - /url: "#"
+              - generic [ref=e383]: ADDECON
+              - generic [ref=e384]: DOMÍNIOS
+            - paragraph [ref=e385]: Especialistas em gestão transparente de condomínios há mais de 15 anos.
+            - generic [ref=e386]:
+              - link "Facebook" [ref=e387] [cursor=pointer]:
+                - /url: https://www.facebook.com/addecon08
+                - img [ref=e388]
+              - link "Instagram" [ref=e390] [cursor=pointer]:
+                - /url: https://www.instagram.com/addecondominios/
+                - img [ref=e391]
+              - link "WhatsApp" [ref=e394] [cursor=pointer]:
+                - /url: https://api.whatsapp.com/message/T2RUN2KJNEY7C1?autoload=1&app_absent=0
+                - img [ref=e395]
+          - generic [ref=e397]:
+            - heading "Links Rápidos" [level=4] [ref=e398]
+            - list [ref=e399]:
+              - listitem [ref=e400]:
+                - link "Sobre Nós" [ref=e401] [cursor=pointer]:
+                  - /url: "#sobre"
+              - listitem [ref=e402]:
+                - link "Serviços" [ref=e403] [cursor=pointer]:
+                  - /url: "#servicos"
+              - listitem [ref=e404]:
+                - link "Aplicativo" [ref=e405] [cursor=pointer]:
+                  - /url: "#aplicativo"
+              - listitem [ref=e406]:
+                - link "Contato" [ref=e407] [cursor=pointer]:
+                  - /url: "#contato"
+          - generic [ref=e408]:
+            - heading "Contato" [level=4] [ref=e409]
+            - list [ref=e410]:
+              - listitem [ref=e411]:
+                - img [ref=e412]
+                - generic [ref=e414]: (11) 91489-5831 / (11) 4774-6263
+              - listitem [ref=e415]:
+                - img [ref=e416]
+                - generic [ref=e419]: addecondominios@hotmail.com
+              - listitem [ref=e420]:
+                - img [ref=e421]
+                - generic [ref=e424]: R. Prof. Dimarães Antônio Sandei, 185 - Cidade da Saúde, Itapevi, SP
+        - generic [ref=e425]:
+          - paragraph [ref=e426]: © 2026 Addecondomínios. Todos os direitos reservados.
+          - generic [ref=e427]:
+            - link "Política de Privacidade" [ref=e428] [cursor=pointer]:
+              - /url: "#"
+            - link "Termos de Uso" [ref=e429] [cursor=pointer]:
+              - /url: "#"
+```

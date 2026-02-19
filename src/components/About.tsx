@@ -59,7 +59,6 @@ const About = () => {
                 </div>
               </div>
             </div>
-            </div>
             {/* Decorative element */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-primary/20 blur-2xl" />
           </div>

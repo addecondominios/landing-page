@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Addecondominios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript">
+      // SPA routing for GitHub Pages
+      // Redirect to index.html with the path preserved in the query string
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      
+      // Only redirect if it's not a file (no extension)
+      if (!pathname.includes('.') && pathname !== '/') {
+        var redirect = pathname + (search || '') + window.location.hash;
+        sessionStorage.redirect = redirect;
+      }
+      
+      // If we have a redirect saved, use it
+      if (sessionStorage.redirect && sessionStorage.redirect !== window.location.pathname) {
+        window.location.replace(window.location.href.split(pathname)[0] + sessionStorage.redirect);
+      }
+    </script>
+  </head>
+  <body>
+    <!-- This page is a catch-all for GitHub Pages SPA routing -->
+  </body>
+</html>
