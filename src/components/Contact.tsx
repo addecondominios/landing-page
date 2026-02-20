@@ -64,13 +64,16 @@ const Contact = () => {
   };
 
   const handleEmailClick = () => {
-    const formElement = document.getElementById("contact-form");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    const sectionElement = document.getElementById("contato");
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
       // Focus no campo de nome
       setTimeout(() => {
-        const nameInput = formElement.querySelector('input[type="text"]') as HTMLInputElement;
-        if (nameInput) nameInput.focus();
+        const formElement = document.getElementById("contact-form");
+        if (formElement) {
+          const nameInput = formElement.querySelector('input[type="text"]') as HTMLInputElement;
+          if (nameInput) nameInput.focus();
+        }
       }, 500);
     }
   };
