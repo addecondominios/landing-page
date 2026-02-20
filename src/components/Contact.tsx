@@ -66,7 +66,7 @@ const Contact = () => {
   const handleEmailClick = () => {
     const formElement = document.getElementById("contact-form");
     if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" });
+      formElement.scrollIntoView({ behavior: "smooth", block: "center" });
       // Focus no campo de nome
       setTimeout(() => {
         const nameInput = formElement.querySelector('input[type="text"]') as HTMLInputElement;
