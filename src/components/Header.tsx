@@ -31,7 +31,7 @@ const Header = ({ isSecondaryPage = false }: HeaderProps) => {
     
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setIsMenuOpen(false);
     }
   };
