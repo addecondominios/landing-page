@@ -1,6 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, AlertCircle, LucideIcon } from "lucide-react";
 import { useState } from "react";
+
+interface ContactInfo {
+  icon: LucideIcon;
+  title: string;
+  value: string;
+  href?: string;
+  onClick?: () => void;
+}
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -55,7 +63,19 @@ const Contact = () => {
     }
   };
 
-  const contactInfo = [
+  const handleEmailClick = () => {
+    const formElement = document.getElementById("contact-form");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth" });
+      // Focus no campo de email
+      setTimeout(() => {
+        const emailInput = formElement.querySelector('input[type="email"]') as HTMLInputElement;
+        if (emailInput) emailInput.focus();
+      }, 500);
+    }
+  };
+
+  const contactInfo: ContactInfo[] = [
     {
       icon: Phone,
       title: "Telefone / WhatsApp",
@@ -66,7 +86,7 @@ const Contact = () => {
       icon: Mail,
       title: "E-mail",
       value: "addecondominios@hotmail.com",
-      href: "mailto:addecondominios@hotmail.com",
+      onClick: handleEmailClick,
     },
     {
       icon: MapPin,
@@ -101,42 +121,66 @@ const Contact = () => {
           <div className="space-y-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
               {contactInfo.map((info) => {
-                const baseClasses = "group relative p-6 rounded-2xl bg-background border border-border transition-all duration-300 overflow-hidden";
-                const hoverClasses = info.href ? "hover:border-primary/50" : "";
+                const baseClasses = "group relative p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden";
                 
-                return info.href ? (
-                  <a
-                    key={info.title}
-                    href={info.href}
-                    className={`${baseClasses} ${hoverClasses}`}
-                  >
-                    <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                    <div className="relative z-10">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
-                        <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                if (info.href) {
+                  return (
+                    <a
+                      key={info.title}
+                      href={info.href}
+                      className={baseClasses}
+                    >
+                      <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                      <div className="relative z-10">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
+                          <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                        </div>
+                        <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-light">{info.title}</p>
+                        <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
+                          {info.value}
+                        </p>
                       </div>
-                      <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-light">{info.title}</p>
-                      <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
-                        {info.value}
-                      </p>
-                    </div>
-                  </a>
-                ) : (
-                  <div
-                    key={info.title}
-                    className={baseClasses}
-                  >
-                    <div className="relative z-10">
-                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-colors">
-                        <info.icon className="w-6 h-6 text-primary transition-colors" />
+                    </a>
+                  );
+                } else if (info.onClick) {
+                  return (
+                    <button
+                      key={info.title}
+                      onClick={info.onClick}
+                      className={`${baseClasses} text-left cursor-pointer`}
+                      type="button"
+                    >
+                      <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                      <div className="relative z-10">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
+                          <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                        </div>
+                        <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-light">{info.title}</p>
+                        <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
+                          {info.value}
+                        </p>
                       </div>
-                      <p className="text-xs sm:text-sm text-foreground mb-1 transition-colors font-light">{info.title}</p>
-                      <p className="text-foreground font-extrabold transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
-                        {info.value}
-                      </p>
+                    </button>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={info.title}
+                      className={baseClasses}
+                    >
+                      <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                      <div className="relative z-10">
+                        <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
+                          <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                        </div>
+                        <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-light">{info.title}</p>
+                        <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
+                          {info.value}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                );
+                  );
+                }
               })}
             </div>
 
@@ -156,7 +200,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-3xl bg-background border border-border">
+          <div id="contact-form" className="p-8 rounded-3xl bg-background border border-border">
             <h3 className="text-2xl font-extrabold mb-6">Envie uma mensagem</h3>
             
             {submitStatus === "success" && (
