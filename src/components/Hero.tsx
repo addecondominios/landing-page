@@ -22,7 +22,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-secondary/50 border border-border rounded-full px-4 py-2 mb-8 animate-fade-up">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-foreground">+15 anos de experiência</span>
+            <span className="text-sm text-foreground font-extrabold">+15 anos de experiência</span>
           </div>
 
           {/* Main Title */}
@@ -50,7 +50,7 @@ const Hero = () => {
             <Button variant="heroOutline" size="xl" className="relative overflow-hidden group" asChild>
               <a href="#servicos">
                 <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                <span className="relative z-10 font-semibold group-hover:text-primary-foreground transition-colors">Conheça Nossos Serviços</span>
+                <span className="relative z-10 font-extrabold group-hover:text-primary-foreground transition-colors">Conheça Nossos Serviços</span>
               </a>
             </Button>
           </div>

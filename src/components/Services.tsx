@@ -83,7 +83,7 @@ const Services = () => {
       <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Nossos Serviços</span>
+          <span className="text-primary font-extrabold text-sm uppercase tracking-wider">Nossos Serviços</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
             Soluções <span className="text-gradient font-bold">Completas</span>
           </h2>

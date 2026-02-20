@@ -28,7 +28,7 @@ const AppSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Aplicativo</span>
+            <span className="text-primary font-extrabold text-sm uppercase tracking-wider">Aplicativo</span>
             <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
               Informação na <span className="text-gradient font-bold">palma da sua mão</span>
             </h2>
