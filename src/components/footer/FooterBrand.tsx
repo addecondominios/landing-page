@@ -1,5 +1,4 @@
 import React from 'react';
-import CRASvg from '@/assets/CRA.svg';
 
 interface FooterBrandProps {
   onLogoClick: () => void;
@@ -22,10 +21,6 @@ const FooterBrand = ({ onLogoClick }: FooterBrandProps) => {
       <p className="text-foreground mb-6 leading-relaxed">
         Especialistas em gestão transparente de condomínios há mais de 15 anos.
       </p>
-      <div className="flex items-center gap-3">
-        <img src={CRASvg} alt="CRA - Conselho Regional de Administração" className="w-10 h-10" />
-        <span className="text-foreground font-light">CRA: 023970</span>
-      </div>
     </div>
   );
 };

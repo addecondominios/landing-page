@@ -1,6 +1,7 @@
 import React from 'react';
 import { Facebook, Instagram, Phone } from "lucide-react";
 import { LucideIcon } from "lucide-react";
+import CRASvg from '@/assets/CRA.svg';
 
 export interface SocialLink {
   icon: LucideIcon;
@@ -20,19 +21,29 @@ const DEFAULT_SOCIAL_LINKS: SocialLink[] = [
 
 const FooterSocialLinks = ({ links = DEFAULT_SOCIAL_LINKS }: FooterSocialLinksProps) => {
   return (
-    <div className="flex gap-3">
-      {links.map((social) => (
-        <a
-          key={social.label}
-          href={social.href}
-          className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-          aria-label={social.label}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <social.icon className="w-5 h-5" />
-        </a>
-      ))}
+    <div className="space-y-4">
+      <div className="flex gap-3">
+        {links.map((social) => (
+          <a
+            key={social.label}
+            href={social.href}
+            className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+            aria-label={social.label}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <social.icon className="w-5 h-5" />
+          </a>
+        ))}
+      </div>
+      <div className="flex items-center gap-3">
+        <img 
+          src={CRASvg} 
+          alt="CRA - Conselho Regional de Administração" 
+          className="w-12 h-12 filter brightness-0 invert" 
+        />
+        <span className="text-foreground font-light text-sm">CRA: 023970</span>
+      </div>
     </div>
   );
 };
