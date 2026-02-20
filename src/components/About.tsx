@@ -65,16 +65,16 @@ const About = () => {
 
           <div className="space-y-6">
             <p className="text-lg text-foreground leading-relaxed font-light">
-              Possuímos como pilares a <span className="text-foreground font-semibold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
+              Possuímos como pilares a <span className="text-foreground font-bold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
             </p>
             <p className="text-lg text-foreground leading-relaxed font-light">
-              Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-bold">em toda a região metropolitana e interior de São Paulo</span>.
+              Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-extrabold">em toda a região metropolitana e interior de São Paulo</span>.
             </p>
-            <div className="flex justify-center flex-wrap gap-3 pt-4">
+            <div className="flex justify-center flex-wrap gap-4 pt-6">
               {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
                 <span
                   key={tag}
-                  className="px-6 py-3 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 h-12 flex items-center justify-center"
+                  className="px-6 py-3 rounded-full bg-primary/10 text-primary text-base font-bold border border-primary/20 h-14 flex items-center justify-center"
                 >
                   {tag}
                 </span>
