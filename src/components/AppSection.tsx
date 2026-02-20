@@ -32,7 +32,7 @@ const AppSection = () => {
             <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
               Informação na <span className="text-gradient font-black">palma da sua mão</span>
             </h2>
-            <p className="text-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-foreground text-lg mb-8 leading-relaxed font-light">
               Acesse a prestação de contas, atas e documentos do condomínio pelo nosso app. 
               Tudo em um só clique!
             </p>

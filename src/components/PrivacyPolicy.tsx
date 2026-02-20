@@ -51,18 +51,18 @@ const PrivacyPolicy = () => {
                 Compromisso do Usuário
               </h2>
 
-              <p className="text-foreground text-lg leading-relaxed font-thin">
+              <p className="text-foreground text-lg leading-relaxed font-light">
                 O usuário se compromete a fazer uso adequado dos conteúdos e da informação que o Addecondomínios oferece no site e com caráter enunciativo, mas não limitativo:
               </p>
 
               <ul className="space-y-3 pl-6">
-                <li className="text-foreground text-lg leading-relaxed list-disc font-thin">
+                <li className="text-foreground text-lg leading-relaxed list-disc font-light">
                   <span>A) Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</span>
                 </li>
-                <li className="text-foreground text-lg leading-relaxed list-disc font-thin">
+                <li className="text-foreground text-lg leading-relaxed list-disc font-light">
                   <span>B) Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, jogos de sorte ou azar, qualquer tipo de pornografia ilegal, de apologia ao terrorismo ou contra os direitos humanos;</span>
                 </li>
-                <li className="text-foreground text-lg leading-relaxed list-disc font-thin">
+                <li className="text-foreground text-lg leading-relaxed list-disc font-light">
                   <span>C) Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) do Addecondomínios, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</span>
                 </li>
               </ul>
@@ -74,11 +74,11 @@ const PrivacyPolicy = () => {
                 Mais Informações
               </h2>
 
-              <p className="text-foreground text-lg leading-relaxed font-thin">
+              <p className="text-foreground text-lg leading-relaxed font-light">
                 Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.
               </p>
 
-              <p className="text-foreground/80 text-base font-thin">
+              <p className="text-foreground/80 text-base font-light">
                 Esta política é efetiva a partir de <strong>19 Fevereiro de 2026</strong>
               </p>
             </div>

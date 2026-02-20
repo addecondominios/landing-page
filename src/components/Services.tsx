@@ -87,7 +87,7 @@ const Services = () => {
           <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
             Soluções <span className="text-gradient font-black">Completas</span>
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto text-lg font-thin">
+          <p className="text-foreground max-w-2xl mx-auto text-lg font-light">
             Oferecemos uma gama completa de serviços para a administração 
             eficiente e transparente do seu condomínio.
           </p>
@@ -106,11 +106,11 @@ const Services = () => {
               </div>
               
               <h3 className="text-xl font-extrabold mb-3 text-foreground">{service.title}</h3>
-              <p className="text-foreground mb-6 font-thin">{service.description}</p>
+              <p className="text-foreground mb-6 font-light">{service.description}</p>
               
               <ul className="space-y-3">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-foreground font-thin">
+                  <li key={feature} className="flex items-center gap-3 text-sm text-foreground font-light">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                     {feature}
                   </li>

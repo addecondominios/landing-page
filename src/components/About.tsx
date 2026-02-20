@@ -30,7 +30,7 @@ const About = () => {
           <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
             Especialistas em <span className="text-gradient font-black">Gestão Condominial</span>
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto text-lg font-thin">
+          <p className="text-foreground max-w-2xl mx-auto text-lg font-light">
             Somos especialistas em gestão transparente, há mais de 15 anos no mercado 
             administrativo condominial desburocratizando o acesso às informações.
           </p>
@@ -64,21 +64,23 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <p className="text-lg text-foreground leading-relaxed font-thin">
+            <p className="text-lg text-foreground leading-relaxed font-light">
               Possuímos como pilares a <span className="text-foreground font-semibold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
             </p>
-            <p className="text-lg text-foreground leading-relaxed font-thin">
+            <p className="text-lg text-foreground leading-relaxed font-light">
               Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-bold">em toda a região metropolitana e interior de São Paulo</span>.
             </p>
-            <div className="flex flex-wrap gap-3 pt-4">
-              {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
-                <span
-                  key={tag}
-                  className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20"
-                >
-                  {tag}
-                </span>
-              ))}
+            <div className="flex justify-center pt-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-2xl">
+                {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
+                  <div
+                    key={tag}
+                    className="h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-sm font-medium text-center px-3 hover:bg-primary/20 transition-colors"
+                  >
+                    {tag}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -95,7 +97,7 @@ const About = () => {
                 <value.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="text-xl font-extrabold mb-4 text-foreground">{value.title}</h3>
-              <p className="text-foreground leading-relaxed font-thin">{value.description}</p>
+              <p className="text-foreground leading-relaxed font-light">{value.description}</p>
             </div>
           ))}
         </div>

@@ -30,11 +30,11 @@ const Hero = () => {
             <img src={logoWhite} alt="Addecon Domínios" className="h-20 md:h-28 lg:h-32 w-auto" />
           </div>
 
-          <p className="text-xl md:text-2xl text-foreground mb-4 font-thin animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-foreground mb-4 font-light animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Administradora de Condomínios
           </p>
 
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-10 font-thin animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-10 font-light animate-fade-up" style={{ animationDelay: '0.3s' }}>
             Gestão transparente e eficiente para o seu condomínio. 
             Mais de 50 condomínios gerenciados na região metropolitana de São Paulo.
           </p>

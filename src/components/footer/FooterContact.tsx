@@ -44,22 +44,22 @@ const FooterContact = ({ contactInfo = DEFAULT_CONTACT_INFO, isSecondaryPage = f
         {contactInfo.map((item) => (
           <li 
             key={item.label}
-            className={`flex items-${item.type === "address" ? "start" : "center"} gap-3 text-foreground font-thin`}
+            className={`flex items-${item.type === "address" ? "start" : "center"} gap-3 text-foreground font-light`}
           >
             <item.icon className={`w-5 h-5 text-primary flex-shrink-0 ${item.type === "address" ? "mt-0.5" : ""}`} />
             {item.type === "email" ? (
-              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base flex-1 font-thin">
+              <span className="text-[10px] sm:text-xs md:text-sm lg:text-base flex-1 font-light">
                 {item.value}
               </span>
             ) : item.href ? (
               <a 
                 href={item.href}
-                className="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1 hover:text-primary transition-colors font-thin"
+                className="text-[10px] sm:text-xs md:text-sm lg:text-base break-all sm:break-normal flex-1 hover:text-primary transition-colors font-light"
               >
                 {item.value}
               </a>
             ) : (
-              <span className={`text-[10px] sm:text-xs md:text-sm lg:text-base flex-1 font-thin ${item.type === "phone" ? "break-words" : ""}`}>
+              <span className={`text-[10px] sm:text-xs md:text-sm lg:text-base flex-1 font-light ${item.type === "phone" ? "break-words" : ""}`}>
                 {item.value}
               </span>
             )}
