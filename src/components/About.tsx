@@ -63,18 +63,18 @@ const About = () => {
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-primary/20 blur-2xl" />
           </div>
 
-          <div className="space-y-6">
-            <p className="text-lg text-foreground leading-relaxed font-light">
-              Possuímos como pilares a <span className="text-foreground font-bold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
+          <div className="space-y-8">
+            <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light">
+              Possuímos como pilares a <span className="text-foreground font-extrabold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
             </p>
-            <p className="text-lg text-foreground leading-relaxed font-light">
-              Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-extrabold">em toda a região metropolitana e interior de São Paulo</span>.
+            <p className="text-xl md:text-2xl text-foreground leading-relaxed font-light">
+              Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-black">em toda a região metropolitana e interior de São Paulo</span>.
             </p>
-            <div className="flex justify-center flex-wrap gap-4 pt-6">
+            <div className="flex justify-center flex-wrap gap-5 pt-8">
               {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
                 <span
                   key={tag}
-                  className="px-6 py-3 rounded-full bg-primary/10 text-primary text-base font-bold border border-primary/20 h-14 flex items-center justify-center"
+                  className="px-8 py-4 rounded-full bg-primary/10 text-primary text-lg font-black border border-primary/20 h-16 flex items-center justify-center"
                 >
                   {tag}
                 </span>

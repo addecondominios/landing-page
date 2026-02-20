@@ -38,9 +38,11 @@ const Footer = ({
           <FooterBrand onLogoClick={handleLogoClick} />
           <FooterSocialLinks links={socialLinks} />
         </div>
-        {!isSecondaryPage && (
-          <FooterQuickLinks links={quickLinks} onLinkClick={onQuickLinkClick} />
-        )}
+        <div className="flex-grow flex justify-center">
+          {!isSecondaryPage && (
+            <FooterQuickLinks links={quickLinks} onLinkClick={onQuickLinkClick} />
+          )}
+        </div>
         <FooterContact contactInfo={contactInfo} isSecondaryPage={isSecondaryPage} />
       </FooterSection>
       <FooterBottom

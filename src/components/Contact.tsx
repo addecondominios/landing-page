@@ -67,10 +67,10 @@ const Contact = () => {
     const formElement = document.getElementById("contact-form");
     if (formElement) {
       formElement.scrollIntoView({ behavior: "smooth" });
-      // Focus no campo de email
+      // Focus no campo de nome
       setTimeout(() => {
-        const emailInput = formElement.querySelector('input[type="email"]') as HTMLInputElement;
-        if (emailInput) emailInput.focus();
+        const nameInput = formElement.querySelector('input[type="text"]') as HTMLInputElement;
+        if (nameInput) nameInput.focus();
       }, 500);
     }
   };

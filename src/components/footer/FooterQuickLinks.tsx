@@ -14,7 +14,6 @@ const DEFAULT_QUICK_LINKS: QuickLink[] = [
   { label: "Sobre Nós", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Aplicativo", href: "#aplicativo" },
-  { label: "Contato", href: "#contato" },
 ];
 
 const FooterQuickLinks = ({ 
