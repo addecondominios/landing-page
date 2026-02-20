@@ -59,19 +59,18 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto animate-fade-up" style={{ animationDelay: '0.5s' }}>
             <div className="flex flex-col items-center justify-center p-8 rounded-2xl bg-card/50 border border-border glow-primary h-full">
               <Building2 className="w-8 h-8 text-primary mb-4" />
-              <span className="text-sm md:text-base text-foreground text-center leading-relaxed">
-                <span className="text-white font-bold">Atendemos em toda a região<br />metropolitana e interior<br />de São Paulo</span>
-              </span>
+              <span className="text-2xl font-black text-foreground text-center mb-2">Atuação Regional</span>
+              <span className="text-sm text-foreground/80 text-center font-light">Região Metropolitana e interior de SP</span>
             </div>
-            <div className="flex flex-col items-center p-6 rounded-2xl bg-card/50 border border-border">
-              <Users className="w-8 h-8 text-primary mb-3" />
-              <span className="text-3xl font-bold text-foreground">15+</span>
-              <span className="text-foreground">Anos de Experiência</span>
+            <div className="flex flex-col items-center p-8 rounded-2xl bg-card/50 border border-border glow-primary h-full">
+              <Users className="w-8 h-8 text-primary mb-4" />
+              <span className="text-2xl font-black text-foreground text-center mb-2">15+ Anos</span>
+              <span className="text-sm text-foreground/80 text-center font-light">Experiência em gestão condominial</span>
             </div>
-            <div className="flex flex-col items-center p-6 rounded-2xl bg-card/50 border border-border">
-              <Shield className="w-8 h-8 text-primary mb-3" />
-              <span className="text-3xl font-bold text-foreground">100%</span>
-              <span className="text-foreground">Transparência</span>
+            <div className="flex flex-col items-center p-8 rounded-2xl bg-card/50 border border-border glow-primary h-full">
+              <Shield className="w-8 h-8 text-primary mb-4" />
+              <span className="text-2xl font-black text-foreground text-center mb-2">100% Transparência</span>
+              <span className="text-sm text-foreground/80 text-center font-light">Processos claros e prestação de contas acessível</span>
             </div>
           </div>
         </div>
