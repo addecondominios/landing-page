@@ -70,17 +70,15 @@ const About = () => {
             <p className="text-lg text-foreground leading-relaxed font-light">
               Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-bold">em toda a região metropolitana e interior de São Paulo</span>.
             </p>
-            <div className="flex justify-center pt-8">
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-2xl">
-                {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
-                  <div
-                    key={tag}
-                    className="h-24 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-sm font-medium text-center px-3 hover:bg-primary/20 transition-colors"
-                  >
-                    {tag}
-                  </div>
-                ))}
-              </div>
+            <div className="flex justify-center flex-wrap gap-3 pt-4">
+              {["Transparência", "Qualidade", "Eficiência", "Confiança"].map((tag) => (
+                <span
+                  key={tag}
+                  className="px-6 py-3 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20 h-12 flex items-center justify-center"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
           </div>
         </div>

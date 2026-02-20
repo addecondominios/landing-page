@@ -78,7 +78,6 @@ const Contact = () => {
       icon: Clock,
       title: "Horário",
       value: "Seg – Sex: 9h às 17h",
-      href: "#",
     },
   ];
 
@@ -101,24 +100,44 @@ const Contact = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              {contactInfo.map((info) => (
-                <a
-                  key={info.title}
-                  href={info.href}
-                  className="group relative p-6 rounded-2xl bg-background border border-border hover:border-primary/50 transition-all duration-300 overflow-hidden"
-                >
-                  <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                  <div className="relative z-10">
-                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
-                      <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+              {contactInfo.map((info) => {
+                const baseClasses = "group relative p-6 rounded-2xl bg-background border border-border transition-all duration-300 overflow-hidden";
+                const hoverClasses = info.href ? "hover:border-primary/50" : "";
+                
+                return info.href ? (
+                  <a
+                    key={info.title}
+                    href={info.href}
+                    className={`${baseClasses} ${hoverClasses}`}
+                  >
+                    <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+                    <div className="relative z-10">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
+                        <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
+                      </div>
+                      <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-light">{info.title}</p>
+                      <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
+                        {info.value}
+                      </p>
                     </div>
-                    <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-light">{info.title}</p>
-                    <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
-                      {info.value}
-                    </p>
+                  </a>
+                ) : (
+                  <div
+                    key={info.title}
+                    className={baseClasses}
+                  >
+                    <div className="relative z-10">
+                      <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 transition-colors">
+                        <info.icon className="w-6 h-6 text-primary transition-colors" />
+                      </div>
+                      <p className="text-xs sm:text-sm text-foreground mb-1 transition-colors font-light">{info.title}</p>
+                      <p className="text-foreground font-extrabold transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
+                        {info.value}
+                      </p>
+                    </div>
                   </div>
-                </a>
-              ))}
+                );
+              })}
             </div>
 
             {/* Map */}

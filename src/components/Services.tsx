@@ -105,8 +105,8 @@ const Services = () => {
                 <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               
-              <h3 className="text-xl font-extrabold mb-3 text-foreground">{service.title}</h3>
-              <p className="text-foreground mb-6 font-light">{service.description}</p>
+              <h3 className="text-xl font-black mb-3 text-foreground">{service.title}</h3>
+              <p className="text-foreground mb-6 font-bold">{service.description}</p>
               
               <ul className="space-y-3">
                 {service.features.map((feature) => (
