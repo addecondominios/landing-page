@@ -30,11 +30,11 @@ const Hero = () => {
             <img src={logoWhite} alt="Addecon Domínios" className="h-20 md:h-28 lg:h-32 w-auto" />
           </div>
 
-          <p className="text-xl md:text-2xl text-foreground mb-4 animate-fade-up" style={{ animationDelay: '0.2s' }}>
+          <p className="text-xl md:text-2xl text-foreground mb-4 font-thin animate-fade-up" style={{ animationDelay: '0.2s' }}>
             Administradora de Condomínios
           </p>
 
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-10 animate-fade-up" style={{ animationDelay: '0.3s' }}>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto mb-10 font-thin animate-fade-up" style={{ animationDelay: '0.3s' }}>
             Gestão transparente e eficiente para o seu condomínio. 
             Mais de 50 condomínios gerenciados na região metropolitana de São Paulo.
           </p>
@@ -43,14 +43,14 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 animate-fade-up" style={{ animationDelay: '0.4s' }}>
             <Button variant="hero" size="xl" asChild>
               <a href="https://wa.me/5511914895831?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento" target="_blank" rel="noopener noreferrer">
-                Solicitar Orçamento
+                <span className="font-black">Solicitar Orçamento</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
             </Button>
             <Button variant="heroOutline" size="xl" className="relative overflow-hidden group" asChild>
               <a href="#servicos">
                 <span className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
-                <span className="relative z-10 font-extrabold group-hover:text-primary-foreground transition-colors">Conheça Nossos Serviços</span>
+                <span className="relative z-10 font-black group-hover:text-primary-foreground transition-colors">Conheça Nossos Serviços</span>
               </a>
             </Button>
           </div>

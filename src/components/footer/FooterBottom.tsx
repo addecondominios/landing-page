@@ -23,7 +23,7 @@ const FooterBottom = ({
 }: FooterBottomProps) => {
   return (
     <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-      <p className="text-foreground text-sm">
+      <p className="text-foreground text-sm font-thin">
         © {year} {companyName}. Todos os direitos reservados.
       </p>
       <div className="flex gap-6 text-sm">

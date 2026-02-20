@@ -28,9 +28,9 @@ const AppSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div>
-            <span className="text-primary font-extrabold text-sm uppercase tracking-wider">Aplicativo</span>
-            <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-              Informação na <span className="text-gradient font-bold">palma da sua mão</span>
+            <span className="text-primary font-black text-sm uppercase tracking-wider">Aplicativo</span>
+            <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
+              Informação na <span className="text-gradient font-black">palma da sua mão</span>
             </h2>
             <p className="text-foreground text-lg mb-8 leading-relaxed">
               Acesse a prestação de contas, atas e documentos do condomínio pelo nosso app. 
@@ -47,7 +47,7 @@ const AppSection = () => {
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                     <feature.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className="text-foreground font-medium">{feature.text}</span>
+                  <span className="text-foreground font-thin">{feature.text}</span>
                 </div>
               ))}
             </div>

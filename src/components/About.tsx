@@ -26,11 +26,11 @@ const About = () => {
       <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-extrabold text-sm uppercase tracking-wider">Sobre Nós</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Especialistas em <span className="text-gradient font-bold">Gestão Condominial</span>
+          <span className="text-primary font-black text-sm uppercase tracking-wider">Sobre Nós</span>
+          <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
+            Especialistas em <span className="text-gradient font-black">Gestão Condominial</span>
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-foreground max-w-2xl mx-auto text-lg font-thin">
             Somos especialistas em gestão transparente, há mais de 15 anos no mercado 
             administrativo condominial desburocratizando o acesso às informações.
           </p>
@@ -51,7 +51,7 @@ const About = () => {
                 <div></div>
                 <div className="text-center">
                   <div className="text-7xl md:text-8xl font-extrabold text-primary mb-4 drop-shadow-2xl">+15</div>
-                  <p className="text-xl md:text-2xl text-white font-semibold drop-shadow-lg">Anos de experiência</p>
+                  <p className="text-xl md:text-2xl text-white font-extrabold drop-shadow-lg">Anos de experiência</p>
                   <p className="text-white/90 mt-2 drop-shadow-md leading-relaxed">administrando condomínios e pessoas<br /></p>
                 </div>
                 <div className="w-40 h-auto opacity-70">
@@ -64,10 +64,10 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed font-thin">
               Possuímos como pilares a <span className="text-foreground font-semibold">qualidade, eficiência, honestidade e comodidade</span> de nossos serviços com os condomínios.
             </p>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-foreground leading-relaxed font-thin">
               Sendo uma das maiores administradoras de Itapevi e região, atuando <span className="text-white font-bold">em toda a região metropolitana e interior de São Paulo</span>.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
@@ -94,8 +94,8 @@ const About = () => {
               <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                 <value.icon className="w-7 h-7 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-foreground">{value.title}</h3>
-              <p className="text-foreground leading-relaxed">{value.description}</p>
+              <h3 className="text-xl font-extrabold mb-4 text-foreground">{value.title}</h3>
+              <p className="text-foreground leading-relaxed font-thin">{value.description}</p>
             </div>
           ))}
         </div>

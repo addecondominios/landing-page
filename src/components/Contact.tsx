@@ -87,11 +87,11 @@ const Contact = () => {
       <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-extrabold text-sm uppercase tracking-wider">Contato</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Entre em <span className="text-gradient font-bold">Contato</span>
+          <span className="text-primary font-black text-sm uppercase tracking-wider">Contato</span>
+          <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
+            Entre em <span className="text-gradient font-black">Contato</span>
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-foreground max-w-2xl mx-auto text-lg font-thin">
             Estamos prontos para atender você e seu condomínio. 
             Entre em contato conosco!
           </p>
@@ -112,8 +112,8 @@ const Contact = () => {
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary-foreground/20 transition-colors">
                       <info.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
                     </div>
-                    <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors">{info.title}</p>
-                    <p className="text-foreground font-semibold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
+                    <p className="text-xs sm:text-sm text-foreground mb-1 group-hover:text-primary-foreground transition-colors font-thin">{info.title}</p>
+                    <p className="text-foreground font-extrabold group-hover:text-primary-foreground transition-colors text-[7px] xs:text-[8px] sm:text-[9px] md:text-[10px] lg:text-xs break-all sm:break-normal">
                       {info.value}
                     </p>
                   </div>
@@ -138,7 +138,7 @@ const Contact = () => {
 
           {/* Contact Form */}
           <div className="p-8 rounded-3xl bg-background border border-border">
-            <h3 className="text-2xl font-bold mb-6">Envie uma mensagem</h3>
+            <h3 className="text-2xl font-extrabold mb-6">Envie uma mensagem</h3>
             
             {submitStatus === "success" && (
               <div className="mb-6 p-4 rounded-xl bg-green-500/10 border border-green-500/50 flex items-center gap-3">
@@ -149,7 +149,7 @@ const Contact = () => {
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="name" className="block text-sm font-thin text-foreground mb-2">
                   Nome <span className="text-red-500">*</span>
                 </label>
                 <input
@@ -170,7 +170,7 @@ const Contact = () => {
               
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="email" className="block text-sm font-thin text-foreground mb-2">
                     E-mail <span className="text-red-500">*</span>
                   </label>
                   <input
@@ -190,7 +190,7 @@ const Contact = () => {
                 </div>
                 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  <label htmlFor="phone" className="block text-sm font-thin text-foreground mb-2">
                     Telefone
                   </label>
                   <input
@@ -211,7 +211,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
+                <label htmlFor="message" className="block text-sm font-thin text-foreground mb-2">
                   Mensagem <span className="text-red-500">*</span>
                 </label>
                 <textarea

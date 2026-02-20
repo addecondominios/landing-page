@@ -110,7 +110,7 @@ const Header = ({ isSecondaryPage = false }: HeaderProps) => {
                   onClick={(e) => scrollToSection('#contato', e)}
                 >
                   <Button variant="hero" size="lg">
-                    Fale Conosco
+                    <span className="font-black">Fale Conosco</span>
                   </Button>
                 </a>
               )}

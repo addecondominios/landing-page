@@ -83,11 +83,11 @@ const Services = () => {
       <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="text-primary font-extrabold text-sm uppercase tracking-wider">Nossos Serviços</span>
-          <h2 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
-            Soluções <span className="text-gradient font-bold">Completas</span>
+          <span className="text-primary font-black text-sm uppercase tracking-wider">Nossos Serviços</span>
+          <h2 className="text-3xl md:text-5xl font-black mt-4 mb-6">
+            Soluções <span className="text-gradient font-black">Completas</span>
           </h2>
-          <p className="text-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-foreground max-w-2xl mx-auto text-lg font-thin">
             Oferecemos uma gama completa de serviços para a administração 
             eficiente e transparente do seu condomínio.
           </p>
@@ -105,12 +105,12 @@ const Services = () => {
                 <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
               
-              <h3 className="text-xl font-bold mb-3 text-foreground">{service.title}</h3>
-              <p className="text-foreground mb-6">{service.description}</p>
+              <h3 className="text-xl font-extrabold mb-3 text-foreground">{service.title}</h3>
+              <p className="text-foreground mb-6 font-thin">{service.description}</p>
               
               <ul className="space-y-3">
                 {service.features.map((feature) => (
-                  <li key={feature} className="flex items-center gap-3 text-sm text-foreground">
+                  <li key={feature} className="flex items-center gap-3 text-sm text-foreground font-thin">
                     <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0" />
                     {feature}
                   </li>
