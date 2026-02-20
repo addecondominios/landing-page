@@ -49,10 +49,19 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
               <div className="absolute inset-0 flex flex-col items-center justify-between h-full p-8">
                 <div></div>
-                <div className="text-center">
-                  <div className="text-7xl md:text-8xl font-extrabold text-primary mb-4 drop-shadow-2xl">+15</div>
-                  <p className="text-xl md:text-2xl text-white font-extrabold drop-shadow-lg">Anos de experiência</p>
-                  <p className="text-white/90 mt-2 drop-shadow-md leading-relaxed">administrando condomínios e pessoas<br /></p>
+                <div className="text-center space-y-4">
+                  <div className="flex items-baseline justify-center gap-2">
+                    <span className="text-6xl md:text-7xl font-extrabold text-primary drop-shadow-2xl">+15</span>
+                    <span className="text-xl md:text-2xl text-primary font-extrabold drop-shadow-lg">anos de experiência</span>
+                  </div>
+                  <div className="space-y-2 mt-6">
+                    <p className="text-lg md:text-xl text-white font-extrabold drop-shadow-lg leading-snug">
+                      Gestão profissional de condomínios com transparência, eficiência e resultados comprovados.
+                    </p>
+                    <p className="text-sm md:text-base text-white/80 font-light drop-shadow-md leading-relaxed">
+                      Soluções completas para síndicos e moradores, com processos organizados, atendimento próximo e foco na valorização do seu patrimônio.
+                    </p>
+                  </div>
                 </div>
                 <div className="w-40 h-auto opacity-70">
                   <img src={logoBranco} alt="Logo ADDECON Domínios" loading="lazy" className="w-full h-auto" />
