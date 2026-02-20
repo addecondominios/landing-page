@@ -38,7 +38,7 @@ const DEFAULT_CONTACT_INFO: ContactInfo[] = [
 
 const FooterContact = ({ contactInfo = DEFAULT_CONTACT_INFO, isSecondaryPage = false }: FooterContactProps) => {
   return (
-    <div className={isSecondaryPage ? "col-start-1" : ""}>
+    <div className={isSecondaryPage ? "ml-auto" : ""}>
       <h4 className="text-foreground font-bold mb-6">Contato</h4>
       <ul className="space-y-4">
         {contactInfo.map((item) => (
