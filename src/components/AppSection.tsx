@@ -61,7 +61,7 @@ const AppSection = () => {
                 </a>
               </Button>
               <Button variant="heroOutline" size="xl" className="gap-3" asChild>
-                <a href="https://play.google.com/store/apps/details?id=com.pointcondominio.condominio&hl=pt" target="_blank" rel="noopener noreferrer">
+                <a href="https://play.google.com/store/apps/details?id=br.com.clientealmahcondos0604" target="_blank" rel="noopener noreferrer">
                   <Download className="w-5 h-5" />
                   Download Android
                 </a>
